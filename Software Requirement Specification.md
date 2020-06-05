@@ -5,17 +5,11 @@ Functional Specifications:
 
 Product Management System: 
 1. View product information
-
 1.1. View product price
-
 1.2. View product reviews
-
 1.3. View product rating
-
 1.4. View product's vendor
-
 1.5. View product's eyewear power options
-
 2. Search feature 
 3. Create product list 
 4. Add/delete products
