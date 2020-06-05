@@ -1,5 +1,3 @@
-Functionality
-
 The following lists the core functional capabilities of EyeSpy, LLC: 
 
 Functional Specifications:
