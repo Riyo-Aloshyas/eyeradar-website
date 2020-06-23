@@ -24,6 +24,17 @@ h1{
 	margin-left:25%;
 
 }
+
+.jumbotron-about{
+	background:firebrick;
+	color:white;
+	text-align:center;
+	margin-left:10%;
+	margin-right: 10%;
+	border-radius: 7px;
+
+}
+
 .jumbotron-primary{
 	background:firebrick;
 	color:white;
@@ -47,6 +58,7 @@ h1{
 	background-color:burlywood;
 	color:white;
 }
+
 
 img{
 	height:max-height;
