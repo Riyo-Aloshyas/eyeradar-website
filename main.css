@@ -48,8 +48,21 @@ h1{
 	text-align:center;
 	margin-bottom:0;
 	margin-left:0px;
-	justify-content: left;
+	border-style: outset;
+	border-color:maroon;
 }
+
+.jumbotron-searchpage{
+	background:white;
+	color:black;
+	text-align:center;
+	margin-bottom:0;
+	margin-left:0px;
+	border-style: outset;
+	border-color:maroon;
+}
+
+
 
 .jumbotron-secondary{
 	background:burlywood;
@@ -81,9 +94,15 @@ img{
 	width:auto;
 }
 
+
+.img-jumbotron-search{
+	margin:0;
+	height:300px;
+	width:auto;
+}
 .img-search{
 	margin:0px;
-	height:150px;
+	height:200px;
 	width:auto;
 }
 

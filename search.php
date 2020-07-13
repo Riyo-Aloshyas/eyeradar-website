@@ -62,7 +62,7 @@
 
    $input = $_POST['searchbar'];
 
-   $connection = mysqli_connect("localhost", "root", "riyo", "vendors");
+   $connection = mysqli_connect("localhost", "root", "brazil", "website");
 
    $sql = "SELECT * FROM amazon WHERE BRAND = '$input' OR NAME = '$input'"; #where match(NAME) against ()
    #echo 'searchbar';
@@ -78,13 +78,13 @@
    while ($result = mysqli_fetch_array($qry))
    {
 
-   	echo "<div class='jumbotron-search'>";
+   	echo "<div class='media jumbotron-searchpage'>";
 
    	$buyLink = $result["PRODUCT_URL"];
    	$imageLink = $result["IMAGE_URL"];
-   	echo "<img class ='img-search' src='$imageLink'>";
+   	echo "<img class ='img-jumbotron-search' src='$imageLink'>";
 
-   	echo "<strong>" . $result["BRAND"] . "</strong>" . " | " . $result["NAME"] . " | " . " <br>" . "PRICE: " . $result["PRICE"] ." click <a href='$buyLink'>here</a> to buy at " . $result["VENDOR"] ;
+   	echo "<strong>" . $result["BRAND"] . "</strong>" . " | " . $result["NAME"] . " | " . " <br>" . "PRICE:" . $result["PRICE"] ." click <a href='$buyLink'>here</a> to buy at " . $result["VENDOR"] ;
    	echo "<br><br>";
    	echo "</div>";
    }
