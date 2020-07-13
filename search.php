@@ -58,45 +58,57 @@
   ?>
 </strong></h4>
 
-<div class="row">
-  <div class="col-6"> <!--WALMART GOES HERE-->
-    <h2>Walmart</h2>
-    <br>
+<?php
 
-   <?php
+   $input = $_POST['searchbar'];
 
-   $connection = mysqli_connect("localhost", "root", "password", "test");
-   $qry = mysqli_query($connection,"SELECT * FROM table");
+   $connection = mysqli_connect("localhost", "root", "riyo", "vendors");
+
+   $sql = "SELECT * FROM amazon WHERE BRAND = '$input' OR NAME = '$input'"; #where match(NAME) against ()
+   #echo 'searchbar';
+
+
+   $qry = mysqli_query($connection, $sql);
+
+   if (!$qry) {
+    printf("Error: %s\n", mysqli_error($connection));
+    exit();
+	}
 
    while ($result = mysqli_fetch_array($qry))
    {
-      echo $result["brand"] . " " . $result["name"] "<br/ ><br/>";
+
+   	echo "<div class='jumbotron-search'>";
+
+   	$buyLink = $result["PRODUCT_URL"];
+   	$imageLink = $result["IMAGE_URL"];
+   	echo "<img class ='img-search' src='$imageLink'>";
+
+   	echo "<strong>" . $result["BRAND"] . "</strong>" . " | " . $result["NAME"] . " | " . " <br>" . "PRICE: " . $result["PRICE"] ." click <a href='$buyLink'>here</a> to buy at " . $result["VENDOR"] ;
+   	echo "<br><br>";
+   	echo "</div>";
    }
+
+
+
+
+   #while ($r = mysqli_fetch_array($result)) {
+   	# code...
+
+   #	echo $result["BRAND"] . " " . $result["NAME"] ;
+   	#echo "<br><br>";
+   #}
+
+   #$qry = mysqli_query($connection,"SELECT * FROM amazon WHERE MATCH(NAME) AGAINST ('Ray-Ban')");
+
+   #while ($result = mysqli_fetch_array($qry))
+   #{echo $result["BRAND"] . " " . $result["NAME"] ;
+   #echo "<br><br>";}
+
+mysqli_close($connection);
 
    ?>
 
-  </div>
-
-  <div class="col-6"> <!--AMAZON GOES HERE-->
-    <h2>Amazon</h2>
-    <br>
-
-  <?php
-
-   $connection = mysqli_connect("localhost", "root", "password", "test");
-   $qry = mysqli_query($connection,"SELECT * FROM table");
-
-   while ($result = mysqli_fetch_array($qry))
-   {
-      echo $result["brand"] . " " . $result["name"] "<br/ ><br/>";
-   }
-
-   mysqli_close($connection);
-
-  ?>
-
-  </div>
-</div>
 
 </body>
 </html>
