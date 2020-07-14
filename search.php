@@ -77,16 +77,24 @@
 
    while ($result = mysqli_fetch_array($qry))
    {
+    
+    echo "<div class='row'>";
+    echo "<div class='col-8>";
+    echo "<div class='jumbotron-searchpage'>";
+   	echo "<div class='media'>";
+    $imageLink = $result["IMAGE_URL"];
+    echo "<img class ='align-self-center mr-3' src='$imageLink'>";
 
-   	echo "<div class='media jumbotron-searchpage'>";
-
+    echo "<div class='media-body'>";
    	$buyLink = $result["PRODUCT_URL"];
-   	$imageLink = $result["IMAGE_URL"];
-   	echo "<img class ='img-jumbotron-search' src='$imageLink'>";
 
-   	echo "<strong>" . $result["BRAND"] . "</strong>" . " | " . $result["NAME"] . " | " . " <br>" . "PRICE:" . $result["PRICE"] ." click <a href='$buyLink'>here</a> to buy at " . $result["VENDOR"] ;
-   	echo "<br><br>";
+   	echo "<br><br><br><br><strong><h4 class='mt-0'>" . $result["NAME"] . "</h4></strong><strong>" . $result["BRAND"] . "</strong><br>" . "<h4>PRICE:" . $result["PRICE"] . "</h4>  Click <a href='$buyLink'>here</a> to buy at <strong>" . $result["VENDOR"] . "</strong>" ;
+    echo "</div>";
    	echo "</div>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
+
    }
 
 
