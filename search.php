@@ -48,6 +48,7 @@
   </nav>
 
 <br>
+<br>
 
 <form name ="form1" method ="get" action ="search.php">
     <div class="input-group mb-3">
@@ -58,16 +59,17 @@
 </div>
 
 <br>
+<br>
 
 <?php
 
    $input = $_GET['k'];
 
-   echo "<h4><strong>";
-   echo "Results for \"" .$input."\":";
+   echo "<h4 class='input-search-page'><strong>";
+   echo "Results for \"" .$input."\"";
    echo "</strong></h4>";
 
-   $connection = mysqli_connect("localhost", "root", "riyo", "vendors");
+   $connection = mysqli_connect("localhost", "root", "brazil", "website");
 
    $sql = "SELECT * FROM amazon WHERE BRAND = '$input' OR NAME = '$input'"; #where match(NAME) against ()
    #echo 'searchbar';
@@ -80,18 +82,29 @@
     exit();
   }
 
+    echo "<div class='top-line'>";
+    echo "</div>";
+
    while ($result = mysqli_fetch_array($qry))
    {
 
-    echo "<div class='media jumbotron-searchpage'>";
+    echo "<div class='searchboxes col-8'>";
+    echo "<div class='media'>";
 
     $buyLink = $result["PRODUCT_URL"];
     $imageLink = $result["IMAGE_URL"];
-    echo "<img class ='img-jumbotron-search' src='$imageLink'>";
 
-    echo "<strong>" . $result["BRAND"] . "</strong>" . " | " . $result["NAME"] . " | " . " <br>" . "PRICE:" . $result["PRICE"] ." click <a href='$buyLink'>here</a> to buy at " . $result["VENDOR"] ;
+    echo "<img class='align-self-center mr-3 img-searchboxes' src='$imageLink'>";
+
+    echo "<div class='media-body'>";
     echo "<br><br>";
+    echo "<h5 class='mt-0'>" . $result["NAME"] . "</h5>";
+    echo "<p>".  $result["PRICE"] . "<strong>" .  $result ["BRAND"] . "</strong></p>";
+    echo " <p>" . " click <a href='$buyLink'>here</a> to buy at " . $result["VENDOR"] . "</p>";
     echo "</div>";
+    echo "</div>";
+    echo "</div>";
+
    }
 
 
