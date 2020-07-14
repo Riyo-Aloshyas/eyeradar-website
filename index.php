@@ -11,18 +11,14 @@
   <script src="https://kit.fontawesome.com/31e213ab78.js" crossorigin="anonymous"></script> <!--for icons-->
   <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'> <!--for google fonts-->
   <link href="main.css" rel="stylesheet" />
-
   <script src="C:\Users\leona\Desktop\node.js"></script>
 </head>
-
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:maroon;">
       <a class="navbar-brand" href="#">EyeSpy</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
   <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
        <li class="nav-item active">
@@ -48,24 +44,21 @@
         <a class="a-nav" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </span>
   </nav>
-
 <div class="row">
     <div class="col-8">
       <h1><strong>Get Eyewear for Cheap!</strong></h1>      
       <br>
       <p>
-  <Form name ="form1" Method ="POST" Action ="search.php">
+  <form name ="form1" method ="get" action ="search.php">
     <div class="input-group mb-3">
-      <input type="text" name="searchbar" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+      <input type="text" name="k" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
     <div class="input-group-prepend">
-  <input type="submit" class="btn btn-outline-secondary" type="button" name="searchbttn"></input>
+  <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="btn"></input>
    </div>
 </div>
   </Form>
     </p>
   </div>
-
-
     <div class="col-4">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -94,8 +87,6 @@
   </a>
 </div></div>
  </div>
-
-
 <div class="media jumbotron-secondary">
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1573617868564-673610c60d5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=528&q=80" alt="...">
   <div class="media-body">
@@ -106,8 +97,6 @@
     <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
 </div>
-
-
 <div class="media jumbotron-primary">
   <div class="media-body">
    <br><br>
@@ -118,7 +107,6 @@
   </div>
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1570053381569-78f606b5caab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="align-self-right mr-3" alt="...">
 </div>
-
 <div class="media jumbotron-secondary">
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1557215235-21d6064d6ff9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=449&q=80" class="align-self-right mr-3" alt="...">
   <div class="media-body">
@@ -129,8 +117,5 @@
     <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
 </div>
-
-
 </body>
-
 </html>

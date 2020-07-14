@@ -48,21 +48,26 @@
   </nav>
 
 <br>
-<h4><strong>
-<?php
-	if (isset($_POST['searchbttn']))
-	 {
-    $input = $_POST['searchbar'];
-      echo "Results for \"" .$input."\":";
-     }
-  ?>
-</strong></h4>
+
+<form name ="form1" method ="get" action ="search.php">
+    <div class="input-group mb-3">
+      <input type="text" name="k" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    <div class="input-group-prepend">
+  <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="btn"></input>
+   </div>
+</div>
+
+<br>
 
 <?php
 
-   $input = $_POST['searchbar'];
+   $input = $_GET['k'];
 
-   $connection = mysqli_connect("localhost", "root", "brazil", "website");
+   echo "<h4><strong>";
+   echo "Results for \"" .$input."\":";
+   echo "</strong></h4>";
+
+   $connection = mysqli_connect("localhost", "root", "riyo", "vendors");
 
    $sql = "SELECT * FROM amazon WHERE BRAND = '$input' OR NAME = '$input'"; #where match(NAME) against ()
    #echo 'searchbar';
@@ -73,38 +78,30 @@
    if (!$qry) {
     printf("Error: %s\n", mysqli_error($connection));
     exit();
-	}
+  }
 
    while ($result = mysqli_fetch_array($qry))
    {
-    
-    echo "<div class='row'>";
-    echo "<div class='col-8>";
-    echo "<div class='jumbotron-searchpage'>";
-   	echo "<div class='media'>";
+
+    echo "<div class='media jumbotron-searchpage'>";
+
+    $buyLink = $result["PRODUCT_URL"];
     $imageLink = $result["IMAGE_URL"];
-    echo "<img class ='align-self-center mr-3' src='$imageLink'>";
+    echo "<img class ='img-jumbotron-search' src='$imageLink'>";
 
-    echo "<div class='media-body'>";
-   	$buyLink = $result["PRODUCT_URL"];
-
-   	echo "<br><br><br><br><strong><h4 class='mt-0'>" . $result["NAME"] . "</h4></strong><strong>" . $result["BRAND"] . "</strong><br>" . "<h4>PRICE:" . $result["PRICE"] . "</h4>  Click <a href='$buyLink'>here</a> to buy at <strong>" . $result["VENDOR"] . "</strong>" ;
+    echo "<strong>" . $result["BRAND"] . "</strong>" . " | " . $result["NAME"] . " | " . " <br>" . "PRICE:" . $result["PRICE"] ." click <a href='$buyLink'>here</a> to buy at " . $result["VENDOR"] ;
+    echo "<br><br>";
     echo "</div>";
-   	echo "</div>";
-    echo "</div>";
-    echo "</div>";
-    echo "</div>";
-
    }
 
 
 
 
    #while ($r = mysqli_fetch_array($result)) {
-   	# code...
+    # code...
 
-   #	echo $result["BRAND"] . " " . $result["NAME"] ;
-   	#echo "<br><br>";
+   #  echo $result["BRAND"] . " " . $result["NAME"] ;
+    #echo "<br><br>";
    #}
 
    #$qry = mysqli_query($connection,"SELECT * FROM amazon WHERE MATCH(NAME) AGAINST ('Ray-Ban')");
