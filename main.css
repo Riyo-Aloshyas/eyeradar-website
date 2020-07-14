@@ -48,8 +48,7 @@ h1{
 	text-align:center;
 	margin-bottom:0;
 	margin-left:0px;
-	border-style: outset;
-	border-color:maroon;
+	justify-content: left;
 }
 
 .jumbotron-secondary{
@@ -82,31 +81,10 @@ img{
 	width:auto;
 }
 
-/*SEARCHBOXES*/
-
-.top-line{
-	border-bottom:ridge;
-	border-width:1px;
-	border-color:lightgray;
-	margin-bottom:0px;
-}
-
-.searchboxes{
-	margin-top:0px;
-	border-bottom:ridge;
-	border-right:ridge;
-	border-color:lightgray;
-	border-width: 1px;
-}
-
-.img-searchboxes{
-	height:250px;
+.img-search{
+	margin:0px;
+	height:150px;
 	width:auto;
-}
-
-.input-search-page{
-	margin-left:2%;
-	margin-bottom:5%;
 }
 
 /*FOR ICONS*/
