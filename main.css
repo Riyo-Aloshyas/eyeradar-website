@@ -48,7 +48,8 @@ h1{
 	text-align:center;
 	margin-bottom:0;
 	margin-left:0px;
-	justify-content: left;
+	border-style: outset;
+	border-color:maroon;
 }
 
 .jumbotron-secondary{
@@ -81,10 +82,36 @@ img{
 	width:auto;
 }
 
-.img-search{
-	margin:0px;
-	height:150px;
-	width:auto;
+/*SEARCHBOXES*/
+
+.top-line{
+	border-bottom:ridge;
+	border-width:1px;
+	border-color:lightgray;
+	margin-bottom:0px;
+}
+
+.searchboxes{
+	margin-top:0px;
+	border-bottom:ridge;
+	border-right:ridge;
+	border-color:lightgray;
+	border-width: 1px;
+}
+
+.img-searchboxes{
+	height:auto;
+	width:200px;
+}
+
+.input-search-page{
+	margin-left:2%;
+	margin-bottom:5%;
+}
+
+.image-vendor{
+	width:125px;
+	height:auto;
 }
 
 /*FOR ICONS*/
@@ -97,4 +124,6 @@ img{
 .a-nav{
 	color:white;
 }
+
+/*FOR PAGINATION*/
 
