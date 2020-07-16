@@ -48,66 +48,77 @@
   </nav>
 
 <br>
-<h4><strong>
-<?php
-	if (isset($_POST['searchbttn']))
-	 {
-    $input = $_POST['searchbar'];
-      echo "Results for \"" .$input."\":";
-     }
-  ?>
-</strong></h4>
+<br>
+
+<form name ="form1" method ="get" action ="search.php">
+    <div class="input-group mb-3">
+      <input type="text" name="k" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+    <div class="input-group-prepend">
+  <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="btn"></input>
+   </div>
+</div>
+
+<br>
+<br>
+
 
 <?php
 
-   $input = $_POST['searchbar'];
+   $input = $_GET['k'];
 
-   $connection = mysqli_connect("localhost", "root", "riyo", "vendors");
+   echo "<h4 class='input-search-page'><strong>";
+   echo "Results for \"" .$input."\"";
+   echo "</strong></h4>";
 
-   $sql = "SELECT * FROM amazon WHERE BRAND = '$input' OR NAME = '$input'"; #where match(NAME) against ()
+   $connection = mysqli_connect("localhost", "root", "brazil", "website");
+
+   $sql = "SELECT * FROM vendors WHERE BRAND = '$input' OR NAME = '$input'"; #where match(NAME) against ()
    #echo 'searchbar';
-
 
    $qry = mysqli_query($connection, $sql);
 
    if (!$qry) {
     printf("Error: %s\n", mysqli_error($connection));
     exit();
-	}
+  }
+
+    echo "<div class='top-line'>";
+    echo "</div>";
 
    while ($result = mysqli_fetch_array($qry))
    {
 
-   	echo "<div class='jumbotron-search'>";
+    echo "<div class='searchboxes col-8'>";
+    echo "<div class='media'>";
 
-   	$buyLink = $result["PRODUCT_URL"];
-   	$imageLink = $result["IMAGE_URL"];
-   	echo "<img class ='img-search' src='$imageLink'>";
+    $buyLink = $result["URL"];
+    $imageLink = $result["IMAGE_URL"];
 
-   	echo "<strong>" . $result["BRAND"] . "</strong>" . " | " . $result["NAME"] . " | " . " <br>" . "PRICE: " . $result["PRICE"] ." click <a href='$buyLink'>here</a> to buy at " . $result["VENDOR"] ;
-   	echo "<br><br>";
-   	echo "</div>";
+    if ($result["VENDOR"] == 'Walmart')
+    {
+      $imageVendor = 'https://cdn.freebiesupply.com/logos/thumbs/2x/walmart-logo.png';
+    } 
+    else if ($result["VENDOR"] == 'Amazon')
+    {
+      $imageVendor = 'https://mobilemarketingwatch.com/wp-content/uploads/2017/04/amazon.jpg';
+    }
+
+    echo "<img class='align-self-center mr-3 img-searchboxes' src='$imageLink'>";
+
+    echo "<div class='media-body'>";
+    echo "<br><br>";
+    echo "<h5 class='mt-0'>" . $result["NAME"] . "</h5>";
+    echo "<p style = 'font-size:20px'><em><strong>".  $result["PRICE"] . "</strong></em></p>";
+
+    echo " <p><strong>" . " click <a href='$buyLink'>here</a> to buy at</strong>
+           <a href = '$buyLink'><img src = '$imageVendor' class = 'image-vendor'></a></p>";
+    echo "</div>";
+    echo "</div>";
+    echo "</div>";
    }
-
-
-
-
-   #while ($r = mysqli_fetch_array($result)) {
-   	# code...
-
-   #	echo $result["BRAND"] . " " . $result["NAME"] ;
-   	#echo "<br><br>";
-   #}
-
-   #$qry = mysqli_query($connection,"SELECT * FROM amazon WHERE MATCH(NAME) AGAINST ('Ray-Ban')");
-
-   #while ($result = mysqli_fetch_array($qry))
-   #{echo $result["BRAND"] . " " . $result["NAME"] ;
-   #echo "<br><br>";}
-
 mysqli_close($connection);
 
-   ?>
+?>
 
 
 </body>
