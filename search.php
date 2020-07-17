@@ -27,7 +27,7 @@
            <a class="nav-link" href="index.php">Home</a>
          </li>
          <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
+          <a class="nav-link" href="FAQ.php">FAQ</a>
          </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us<span class="sr-only"></span></a>
@@ -52,7 +52,7 @@
 
 <form name ="form1" method ="get" action ="search.php">
     <div class="input-group mb-3">
-      <input type="text" name="k" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+      <input type="text" name="k" class="form-control" placeholder="Search using the product name or Brand!" aria-label="Example text with button addon" aria-describedby="button-addon1">
     <div class="input-group-prepend">
   <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="btn"></input>
    </div>

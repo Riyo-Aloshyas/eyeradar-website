@@ -26,7 +26,7 @@ h1{
 }
 
 .jumbotron-about{
-	background:firebrick;
+	background:maroon;
 	color:white;
 	text-align:center;
 	margin-left:10%;
@@ -36,7 +36,7 @@ h1{
 }
 
 .jumbotron-primary{
-	background:firebrick;
+	background:maroon;
 	color:white;
 	text-align:center;
 	margin-bottom:0;
@@ -53,19 +53,19 @@ h1{
 }
 
 .jumbotron-secondary{
-	background:burlywood;
+	background:#ce954b;
 	color:white;
 	text-align:center;
 	margin-bottom:0;
 }
 
-.jumbotron-login{
+.jumbotron-faq{
 
 	border-radius: 10px;
-	margin-top: 10%;
-	width:80%;
-	margin-left:10%;
-	background-color:burlywood;
+	margin-left:1%;
+	margin-right:1%;
+	width:98%;
+	background-color:maroon;
 	color:white;
 }
 
@@ -124,6 +124,26 @@ img{
 .a-nav{
 	color:white;
 }
+
+
+/*FOOTERS*/
+.row-footer{
+	background-color:maroon; 
+	color:white;
+	padding: 10px 10px;
+}
+
+.row-footer-faq{
+	background-color:maroon; 
+	color:white;
+	padding: 10px 10px;
+	margin-left,margin-right:1%;
+}
+
+.links{
+	color:white;
+}
+
 
 /*FOR PAGINATION*/
 
