@@ -37,7 +37,7 @@
         </li>
       </ul>
       <span style="font-size: 1.5em; color: white;">
-          <a class="a-nav"href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a class="a-nav"href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         </span>
         <span style="font-size: 1.5em; color: white;">
           <a class="a-nav" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
@@ -166,7 +166,7 @@
         if($max_pages > 1) {
         //previous button
           if (!($start<=0)) 
-            echo " <a href='search.php?search=$search&submit=Search&start=$prev'>Prev</a> ";
+            echo " <a class='btn btn-primary' href='search.php?search=$search&submit=Search&start=$prev'>Prev</a> ";
             //pages 
             if ($max_pages < 7 + ($adjacents * 2))   //not enough pages to bother breaking it up
             {
@@ -174,10 +174,12 @@
               for ($counter = 1; $counter <= $max_pages; $counter++)
                 {
                   if ($i == $start){
-                    echo " <a href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
+                    echo " <a class='btn btn-primary'
+                    href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
                   }
                   else {
-                    echo " <a href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
+                    echo " <a class='btn btn-primary'
+                    href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
                   }
 
                   $i = $i + $per_page;
@@ -192,10 +194,12 @@
                   for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++)
                     {
                       if ($i == $start){
-                        echo " <a href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
+                        echo " <a class='btn btn-primary'
+                        href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
                       }
                       else {
-                        echo " <a href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
+                        echo " <a class='btn btn-primary'
+                        href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
                       }
 
                       $i = $i + $per_page;
@@ -205,18 +209,22 @@
                 //in middle; hide some front and some back
                 elseif($max_pages - ($adjacents * 2) > ($start / $per_page) && ($start / $per_page) > ($adjacents * 2))
                   {
-                    echo " <a href='search.php?search=$search&submit=Search&start=0'>1</a> ";
-                    echo " <a href='search.php?search=$search&submit=Search&start=$per_page'>2</a> .... ";
+                    echo " <a class='btn btn-primary'
+                    href='search.php?search=$search&submit=Search&start=0'>1</a> ";
+                    echo " <a class='btn btn-primary'
+                    href='search.php?search=$search&submit=Search&start=$per_page'>2</a> .... ";
 
                     $i = $start;
 
                     for ($counter = ($start/$per_page)+1; $counter < ($start / $per_page) + $adjacents + 2; $counter++)
                       {
                         if ($i == $start){
-                          echo " <a href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
+                          echo " <a class='btn btn-primary'
+                          href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
                         }
                         else {
-                          echo " <a href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
+                          echo " <a class='btn btn-primary'
+                          href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
                         }
 
                         $i = $i + $per_page;
@@ -225,18 +233,18 @@
 
                   //close to end; only hide early pages
                   else{
-                    echo " <a href='search.php?search=$search&submit=Search&start=0'>1</a> ";
-                    echo " <a href='search.php?search=$search&submit=Search&start=$per_page'>2</a> .... ";
+                    echo " <a class='btn btn-primary' href='search.php?search=$search&submit=Search&start=0'>1</a> ";
+                    echo " <a class='btn btn-primary' href='search.php?search=$search&submit=Search&start=$per_page'>2</a> .... ";
 
                     $i = $start;
 
                     for ($counter = ($start / $per_page) + 1; $counter <= $max_pages; $counter++)
                       {
                         if ($i == $start){
-                          echo " <a href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
+                          echo " <a class='btn btn-primary' href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
                         }
                         else{
-                          echo " <a href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
+                          echo " <a class='btn btn-primary' href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
                         }
 
                         $i = $i + $per_page;
@@ -247,7 +255,7 @@
             //next button
 
             if (!($start >=$foundnum-$per_page))
-              echo " <a href='search.php?search=$search&submit=Search&start=$next'>Next</a> ";
+              echo " <a class='btn btn-primary' href='search.php?search=$search&submit=Search&start=$next'>Next</a> ";
         }
 
         echo "</center>";
