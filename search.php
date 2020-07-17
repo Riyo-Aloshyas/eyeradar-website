@@ -52,9 +52,9 @@
 
 <form name ="form1" method ="get" action ="search.php">
     <div class="input-group mb-3">
-      <input type="text" name="k" class="form-control" placeholder="Search using the product name or Brand!" aria-label="Example text with button addon" aria-describedby="button-addon1">
+      <input type="text" name="search" class="form-control" placeholder="Search using the product name or Brand!" aria-label="Example text with button addon" aria-describedby="button-addon1">
     <div class="input-group-prepend">
-  <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="btn"></input>
+  <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="submit"></input>
    </div>
 </div>
 
@@ -63,63 +63,201 @@
 
 
 <?php
+  $button = $_GET ['submit'];
+  $search = $_GET ['search']; 
 
-   $input = $_GET['k'];
+  echo "<h4 class='input-search-page'><strong>";
+  echo "Results for \"" .$search."\"";
+  echo "</strong></h4>";
 
-   echo "<h4 class='input-search-page'><strong>";
-   echo "Results for \"" .$input."\"";
-   echo "</strong></h4>";
+  if(strlen($search)<=1)
+    echo "Search term too short";
+  else{
 
-   $connection = mysqli_connect("localhost", "root", "brazil", "website");
+    $search_exploded = explode (" ", $search);
 
-   $sql = "SELECT * FROM vendors WHERE BRAND = '$input' OR NAME = '$input'"; #where match(NAME) against ()
-   #echo 'searchbar';
+    $x = "";
+    $construct = "";
 
-   $qry = mysqli_query($connection, $sql);
+    foreach($search_exploded as $search_each)
+      {
+        $x++;
+        if($x==1)
+          $construct .="title LIKE '%$search_each%'";
+        else
+          $construct .="AND title LIKE '%$search_each%'";
+      }
 
-   if (!$qry) {
-    printf("Error: %s\n", mysqli_error($connection));
-    exit();
-  }
+    // connect to database
+    $con=mysqli_connect("localhost","root","brazil","website");
 
-    echo "<div class='top-line'>";
-    echo "</div>";
+    $sql ="SELECT * FROM vendors WHERE BRAND = '$search' OR NAME = '$search'";
+    $run = mysqli_query($con,$sql);
+    $foundnum = mysqli_num_rows($run);
 
-   while ($result = mysqli_fetch_array($qry))
-   {
-
-    echo "<div class='searchboxes col-8'>";
-    echo "<div class='media'>";
-
-    $buyLink = $result["URL"];
-    $imageLink = $result["IMAGE_URL"];
-
-    if ($result["VENDOR"] == 'Walmart')
+    if ($foundnum==0)
     {
-      $imageVendor = 'https://cdn.freebiesupply.com/logos/thumbs/2x/walmart-logo.png';
-    } 
-    else if ($result["VENDOR"] == 'Amazon')
-    {
-      $imageVendor = 'https://mobilemarketingwatch.com/wp-content/uploads/2017/04/amazon.jpg';
+      echo "Sorry, there are no matching result for <b>$search</b>.</br></br>1.}
+          Try more general words. for example: If you want to search 'how to create a website'
+          then use general keyword like 'create' 'website'</br>
+          2. Try different words with similar meaning</br>
+          3. Please check your spelling";
+    }
+    else{
+      echo "<h4><p class='input-search-page'>$foundnum results found!</p></h4>";
+
+      // define num of results per page
+      $per_page = 10;
+      $start = isset($_GET['start']) ? $_GET['start']: '';
+      $max_pages = ceil($foundnum / $per_page);
+
+      if(!$start)
+        $start=0;
+
+      // get num of results stored in database
+      $sql = "SELECT * FROM vendors WHERE BRAND = '$search' OR NAME = '$search' LIMIT $start, $per_page";
+      $getquery = mysqli_query($con,$sql);
+
+      echo "<div class='top-line'>";
+      echo "</div>";
+
+      while($runrows = mysqli_fetch_array($getquery))
+      {
+        echo "<div class='searchboxes col-8'>";
+        echo "<div class='media'>";
+
+        $buyLink = $runrows["URL"];
+        $imageLink = $runrows["IMAGE_URL"];
+
+        if ($runrows["VENDOR"] == 'Walmart')
+        {
+          $imageVendor = 'https://cdn.freebiesupply.com/logos/thumbs/2x/walmart-logo.png';
+        }
+        else if ($runrows["VENDOR"] == 'Amazon')
+        {
+          $imageVendor = 'https://mobilemarketingwatch.com/wp-content/uploads/2017/04/amazon.jpg';
+        }
+
+        echo "<img class='align-self-center mr-3 img-searchboxes' src='$imageLink'>";
+        echo "<div class='media-body'>";
+        echo "<br><br>";
+
+        echo "<h5 class='mt-0'>" . $runrows["NAME"] . "</h5>";
+        echo "<p style = 'font-size:20px'><em><strong>".  $runrows["PRICE"] . "</strong></em></p>";
+
+        echo " <p><strong>" . " click <a href='$buyLink'>here</a> to buy at</strong>
+                <a href = '$buyLink'><img src = '$imageVendor' class = 'image-vendor'></a></p>";
+              echo "</div>";
+          echo "</div>";
+          echo "</div>";
+        }
+
+
+              // PAGINATION for search results
+
+        echo "<center> <br><br>";
+
+        $prev = $start - $per_page;
+        $next = $start + $per_page;
+
+        $adjacents = 3;
+        $last = $max_pages - 1;
+
+        if($max_pages > 1) {
+        //previous button
+          if (!($start<=0)) 
+            echo " <a href='search.php?search=$search&submit=Search&start=$prev'>Prev</a> ";
+            //pages 
+            if ($max_pages < 7 + ($adjacents * 2))   //not enough pages to bother breaking it up
+            {
+              $i = 0;
+              for ($counter = 1; $counter <= $max_pages; $counter++)
+                {
+                  if ($i == $start){
+                    echo " <a href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
+                  }
+                  else {
+                    echo " <a href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
+                  }
+
+                  $i = $i + $per_page;
+                }
+            }
+
+            elseif($max_pages > 5 + ($adjacents * 2))    //enough pages to hide some
+            {//close to beginning; only hide later pages
+              if(($start/$per_page) < 1 + ($adjacents * 2))
+                {
+                  $i = 0;
+                  for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++)
+                    {
+                      if ($i == $start){
+                        echo " <a href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
+                      }
+                      else {
+                        echo " <a href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
+                      }
+
+                      $i = $i + $per_page;
+                    }
+                }
+
+                //in middle; hide some front and some back
+                elseif($max_pages - ($adjacents * 2) > ($start / $per_page) && ($start / $per_page) > ($adjacents * 2))
+                  {
+                    echo " <a href='search.php?search=$search&submit=Search&start=0'>1</a> ";
+                    echo " <a href='search.php?search=$search&submit=Search&start=$per_page'>2</a> .... ";
+
+                    $i = $start;
+
+                    for ($counter = ($start/$per_page)+1; $counter < ($start / $per_page) + $adjacents + 2; $counter++)
+                      {
+                        if ($i == $start){
+                          echo " <a href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
+                        }
+                        else {
+                          echo " <a href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
+                        }
+
+                        $i = $i + $per_page;
+                      }
+                  }
+
+                  //close to end; only hide early pages
+                  else{
+                    echo " <a href='search.php?search=$search&submit=Search&start=0'>1</a> ";
+                    echo " <a href='search.php?search=$search&submit=Search&start=$per_page'>2</a> .... ";
+
+                    $i = $start;
+
+                    for ($counter = ($start / $per_page) + 1; $counter <= $max_pages; $counter++)
+                      {
+                        if ($i == $start){
+                          echo " <a href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
+                        }
+                        else{
+                          echo " <a href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
+                        }
+
+                        $i = $i + $per_page;
+                      }
+                    }
+            }
+
+            //next button
+
+            if (!($start >=$foundnum-$per_page))
+              echo " <a href='search.php?search=$search&submit=Search&start=$next'>Next</a> ";
+        }
+
+        echo "</center>";
+      }
     }
 
-    echo "<img class='align-self-center mr-3 img-searchboxes' src='$imageLink'>";
-
-    echo "<div class='media-body'>";
     echo "<br><br>";
-    echo "<h5 class='mt-0'>" . $result["NAME"] . "</h5>";
-    echo "<p style = 'font-size:20px'><em><strong>".  $result["PRICE"] . "</strong></em></p>";
 
-    echo " <p><strong>" . " click <a href='$buyLink'>here</a> to buy at</strong>
-           <a href = '$buyLink'><img src = '$imageVendor' class = 'image-vendor'></a></p>";
-    echo "</div>";
-    echo "</div>";
-    echo "</div>";
-   }
-mysqli_close($connection);
-
-?>
-
+    mysqli_close($con);
+    ?>
 
 </body>
 </html>

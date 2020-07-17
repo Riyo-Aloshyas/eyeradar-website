@@ -50,9 +50,9 @@
       <p>
   <form name ="form1" method ="get" action ="search.php">
     <div class="input-group mb-3">
-      <input type="text" name="k" class="form-control" placeholder="Search using the product name or Brand!" aria-label="Example text with button addon" aria-describedby="button-addon1">
+      <input type="text" name="search" class="form-control" placeholder="Search using the product name or Brand!" aria-label="Example text with button addon" aria-describedby="button-addon1">
     <div class="input-group-prepend">
-  <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="btn"></input>
+  <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="submit"></input>
    </div>
 </div>
   </Form>
