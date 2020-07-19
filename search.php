@@ -50,6 +50,8 @@
 <br>
 <br>
 
+
+
 <form name ="form1" method ="get" action ="search.php">
     <div class="input-group mb-3">
       <input type="text" name="search" class="form-control" placeholder="Search using the product name or Brand!" aria-label="Example text with button addon" aria-describedby="button-addon1">
@@ -58,8 +60,18 @@
    </div>
 </div>
 
-<br>
-<br>
+<div class="dropdown">
+  <button class="btn btn-danger [] dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filter By
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <input type="submit" value="Price High to Low" class="dropdown-item" type="button" name="hightolow"></input>
+    <input type="submit" value="Price Low to High" class="dropdown-item" type="button" name="lowtohigh"></input>
+  </div>
+</div>
+
+</form>
+
 
 
 <?php
@@ -71,7 +83,7 @@
   echo "</strong></h4>";
 
   if(strlen($search)<=1)
-    echo "Search term too short";
+    echo "<h1>Oh No :( Search term too short! Try Searching again!</h1>";
   else{
 
     $search_exploded = explode (" ", $search);
@@ -92,16 +104,16 @@
     $con=mysqli_connect("localhost","root","brazil","website");
 
     $sql ="SELECT * FROM vendors WHERE BRAND = '$search' OR NAME = '$search'";
+
     $run = mysqli_query($con,$sql);
     $foundnum = mysqli_num_rows($run);
 
     if ($foundnum==0)
     {
-      echo "Sorry, there are no matching result for <b>$search</b>.</br></br>1.}
-          Try more general words. for example: If you want to search 'how to create a website'
-          then use general keyword like 'create' 'website'</br>
-          2. Try different words with similar meaning</br>
-          3. Please check your spelling";
+      echo "<h1>Oh No :( No matching result for \"<b>$search</b>\"</h1>.</br></br>
+          <h4>1. Try checking your spelling when it comes to Brand names and others. They can be very complicated!</br>
+          2. Try another product or Brand, maybe we don't have the one you're looking for!</br>
+          3. Just overall try again!</h4>";
     }
     else{
       echo "<h4><p class='input-search-page'>$foundnum results found!</p></h4>";
@@ -143,7 +155,12 @@
         echo "<br><br>";
 
         echo "<h5 class='mt-0'>" . $runrows["NAME"] . "</h5>";
-        echo "<p style = 'font-size:20px'><em><strong>".  $runrows["PRICE"] . "</strong></em></p>";
+        if ($runrows["PRICE"] == NULL){
+          echo "<p style = 'font-size:20px'><em><strong> Price Not Available. Click link!" . "</strong></em></p>";
+        }
+        else{
+          echo "<p style = 'font-size:20px'><em><strong>$".  $runrows["PRICE"] . "</strong></em></p>";
+        }
 
         echo " <p><strong>" . " click <a href='$buyLink'>here</a> to buy at</strong>
                 <a href = '$buyLink'><img src = '$imageVendor' class = 'image-vendor'></a></p>";
