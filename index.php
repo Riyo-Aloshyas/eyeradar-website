@@ -57,7 +57,14 @@
 </div>
   </Form>
     </p>
+
+    <br><br>
+    <h4 style="text-align:center;margin-bottom:2px"> Stores in our catalog</h4>
+      <img class ="image-vendor-index" src="https://i5.walmartimages.com/dfw/63fd9f59-49cb/655d1fa6-2244-4690-be27-cc1a70a30112/v1/walmart_logo_1x1.png">
+      <img class="image-vendor-index-following" src="data:image/png;base64,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">
+  </nav>
   </div>
+
     <div class="col-4">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -101,8 +108,8 @@
    <br><br>
     <h1>Eyewear Shopping Made Easy!</h1>
     <br>
-    <p> Set out to disrupt the traditional eyewear industry, EyeSpy, LLC is an eyewear price comparison website displaying a variety of both high-quality designer  and house brands with a wide-range of styles and lens types.  </p> <br>
-    <p class="mb-0">By compiling prices on eyewear into a single convenient spot, EyeSpy, LLC provides consumers  with the cheapest prices available. </p>
+    <p> Set out to disrupt the traditional eyewear industry, EyeSpy, LLC is an eyewear price comparison website displaying a variety of both high-quality designer  and house brands with a wide-range of styles and lens types.  </p> <br>
+    <p class="mb-0">By compiling prices on eyewear into a single convenient spot, EyeSpy, LLC provides consumers  with the cheapest prices available. </p>
   </div>
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1570053381569-78f606b5caab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="align-self-right mr-3" alt="...">
 </div>
@@ -110,10 +117,10 @@
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1557215235-21d6064d6ff9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=449&q=80" class="align-self-right mr-3" alt="...">
   <div class="media-body">
     <br><br>
-    <h1>Eyewear is too expensive</h1>
+    <h1>Glasses are too cool to not wear them!</h1>
     <br>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>Some of us have the luck to have 20/20 vision and others don't. But no matter if you need glasses or not, they don't have to be an item that have the sole purpose of correcting your sight, they can be used as a fashion device!</p>
+    <p class="mb-0">Stop overpaying for eyewear with EyeSpy, LLC, and finally get that pair you always knew would look great on you!</p>
   </div>
 </div>
 

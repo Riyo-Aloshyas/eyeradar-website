@@ -115,13 +115,18 @@ img{
 }
 
 .image-vendor-index{
-	width:175px;
+	width:20%;
 	height:auto;
-	margin-left:17%;
+	margin-left:30%;
+	margin-top:0px;
 }
 
-.dropdown{
-	margin-left:69%;
+.image-vendor-index-following{
+	width:20%;
+	height:auto;
+	margin-left:0px;
+	margin-right:10%;
+	margin-top:0px;
 }
 
 /*FOR ICONS*/
