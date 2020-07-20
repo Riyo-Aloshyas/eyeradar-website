@@ -78,7 +78,7 @@ img{
 
 .img-jumbotron{
 	margin:0;
-	height:400px;
+	height:300px;
 	width:auto;
 }
 
@@ -112,6 +112,16 @@ img{
 .image-vendor{
 	width:125px;
 	height:auto;
+}
+
+.image-vendor-index{
+	width:175px;
+	height:auto;
+	margin-left:17%;
+}
+
+.dropdown{
+	margin-left:69%;
 }
 
 /*FOR ICONS*/

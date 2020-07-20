@@ -60,16 +60,6 @@
    </div>
 </div>
 
-<div class="dropdown">
-  <button class="btn btn-danger [] dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Filter By
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <input type="submit" value="Price High to Low" class="dropdown-item" type="button" name="hightolow"></input>
-    <input type="submit" value="Price Low to High" class="dropdown-item" type="button" name="lowtohigh"></input>
-  </div>
-</div>
-
 </form>
 
 
@@ -127,7 +117,7 @@
         $start=0;
 
       // get num of results stored in database
-      $sql = "SELECT * FROM vendors WHERE BRAND = '$search' OR NAME = '$search' LIMIT $start, $per_page";
+      $sql = "SELECT * FROM vendors WHERE BRAND = '$search' OR NAME = '$search' ORDER BY -PRICE DESC LIMIT $start, $per_page";
       $getquery = mysqli_query($con,$sql);
 
       echo "<div class='top-line'>";
