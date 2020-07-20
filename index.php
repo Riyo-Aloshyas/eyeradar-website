@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>EyeSpy</title>
@@ -90,19 +90,19 @@
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1573617868564-673610c60d5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=528&q=80" alt="...">
   <div class="media-body">
     <br><br>
-    <h1>Why you should use EyeSpy</h1>
+    <h1>Eyewear is Too Expensive</h1>
     <br>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>....but they don't have to be. 7 out of 10 adults in the United States need eye correction. Unfortunately, Americans are overpaying for glasses because eyewear is a health necessity and many businesses are taking advantage of that. </p>
+    <p class="mb-0">Eyespy is here to level the playing field by providing product prices across multiple stores. Our search engine makes sure that you'll never get taken advantage of again.</p>
   </div>
 </div>
 <div class="media jumbotron-primary">
   <div class="media-body">
    <br><br>
-    <h1>You're tired of digging to find good prices</h1>
+    <h1>Eyewear Shopping Made Easy!</h1>
     <br>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p> Set out to disrupt the traditional eyewear industry, EyeSpy, LLC is an eyewear price comparison website displaying a variety of both high-quality designer  and house brands with a wide-range of styles and lens types.  </p> <br>
+    <p class="mb-0">By compiling prices on eyewear into a single convenient spot, EyeSpy, LLC provides consumers  with the cheapest prices available. </p>
   </div>
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1570053381569-78f606b5caab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="align-self-right mr-3" alt="...">
 </div>
