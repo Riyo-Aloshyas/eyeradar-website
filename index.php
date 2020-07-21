@@ -59,15 +59,35 @@
 </div>
   </Form>
     </p>
-
-
-    <br>
-
-    <div style="margin-left:15%;">
-      <strong style="font-size:20px;">Compare Prices Between:</strong>
-      <img class ="image-vendor-index" src="https://i5.walmartimages.com/dfw/63fd9f59-49cb/655d1fa6-2244-4690-be27-cc1a70a30112/v1/walmart_logo_1x1.png">
-      <img class="image-vendor-index-following" src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c518.png">
+<br><br><br>
+<div class="row">
+  <div class="col-6">
+<div class="dropdown">
+  <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-left:30%; max-width:80%;">
+    Click to See Stores Available!
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li> <img class ="image-vendor-index" src="https://i5.walmartimages.com/dfw/63fd9f59-49cb/655d1fa6-2244-4690-be27-cc1a70a30112/v1/walmart_logo_1x1.png"><img class="image-vendor-index-following" src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c518.png"> And Many More to Come!</li>
+  </ul>
 </div>
+</div>
+
+<div class="col-6">
+<div class="dropdown">
+  <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-left:10%; max-width:80%;">
+    How Does EyeRadar Work?
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li style="margin-left:10px;">Search using your favorite brands! You can search by style, color, name, and price (with no "$")</li>
+  </ul>
+</div>
+</div>
+
+</div>
+
+
 
 </div>
 </strong>

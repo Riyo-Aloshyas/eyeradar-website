@@ -126,13 +126,15 @@ img{
 	width:20%;
 	height:auto;
 	margin-top:0px;
+	margin-left:2%;
 }
 
 .image-vendor-index-following{
 	width:20%;
 	height:auto;
-	margin-right:10%;
+	margin-right:2%;
 	margin-top:0px;
+	margin-left:2%;
 }
 
 /*FOR ICONS*/
@@ -167,4 +169,3 @@ img{
 
 
 /*FOR PAGINATION*/
-
