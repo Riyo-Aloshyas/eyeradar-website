@@ -21,7 +21,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:maroon;">
-    <a class="navbar-brand" href="#">EyeSpy</a>
+    <a class="navbar-brand" href="#">EyeRadar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
         </button>
@@ -78,16 +78,16 @@
         <br>
 
         <p class="lead">
-          <h5>"Why is using EyeSpy a smart move?"</h5>
+          <h5>"Why is using EyeRadar a smart move?"</h5>
         </p>
         <p>
-EyeSpy has one crystal clear goal: make your life easier and have you save money. We have in our databases the biggest retailers and the most well known brand of eyewear, all in one place! No need to go to different tabs to see where your favorite pair or sunglasses is the most cheap at: EyeSpy does it all for you, all in one page!
+EyeRadar has one crystal clear goal: make your life easier and have you save money. We have in our databases the biggest retailers and the most well known brand of eyewear, all in one place! No need to go to different tabs to see where your favorite pair or sunglasses is the most cheap at: EyeRadar does it all for you, all in one page!
         </p>
 
         <br>
 
         <p class="lead">
-          <h5>"How much money will it cost to use EyeSpy?"</h5>
+          <h5>"How much money will it cost to use EyeRadar?"</h5>
 It will cost you a whooping total of: $0.00. 
         </p>
 
@@ -108,10 +108,10 @@ We love a good feedback from our costumers! All you have to do is click on Conta
       <div class="media-body">
         <br><br>
         <ul style="list-style:none;">
-            <li><h5>Eyespy</h5></li>
+            <li><h5>EyeRadar</h5></li>
             <br>
-            <li>© EyeSpy.com 2020-</li>
-            <li>All Rights Reserved. EyeSpy is not affiliated with</li>
+            <li>© EyeRadar.com 2020-</li>
+            <li>All Rights Reserved. EyeRadar is not affiliated with</li>
             <li>any retailer, store, or brand.</li>
           </ul>
     </div>
@@ -138,8 +138,8 @@ We love a good feedback from our costumers! All you have to do is click on Conta
             <br>
             <li><u><a href="about.html" class="links"  target="_blank">About Us</a></u></li>
             <li><u><a href="ContactUs.html"class="links"  target="_blank">Follow Us</a></u></li>
-            <li><u>Terms of Use</u></li>
-            <li><u>Privacy Policy</u></li>
+            <li><u><a href="tou.html" class="links">Terms of Use</a></u></li>
+            <li><u><a href="privacypolicy.html" class="links">Privacy Policy</a></u></li>
           </ul>
         </div>
       </div>

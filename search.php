@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>EyeSpy</title>
+  <title>EyeRadar</title>
   <!--first 4 are BOOTSTRAP-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -16,7 +16,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:maroon;">
-      <a class="navbar-brand" href="#">EyeSpy</a>
+      <a class="navbar-brand" href="#">EyeRadar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

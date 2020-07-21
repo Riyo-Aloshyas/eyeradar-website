@@ -20,8 +20,8 @@ h1{
 }
 
 .input-group{
-	width:50%;
-	margin-left:25%;
+	width:75%;
+	margin-left:12.5%;
 
 }
 
@@ -67,6 +67,14 @@ h1{
 	width:98%;
 	background-color:maroon;
 	color:white;
+}
+
+.jumbotron-index{
+	margin-top:0px;
+	background:maroon;
+	border-radius:20px;
+	width:90%;
+	height:60%;
 }
 
 
@@ -117,14 +125,12 @@ img{
 .image-vendor-index{
 	width:20%;
 	height:auto;
-	margin-left:30%;
 	margin-top:0px;
 }
 
 .image-vendor-index-following{
 	width:20%;
 	height:auto;
-	margin-left:0px;
 	margin-right:10%;
 	margin-top:0px;
 }
