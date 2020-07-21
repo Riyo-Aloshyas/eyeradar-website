@@ -47,7 +47,7 @@
 <div class="row">
     <div class="col-8">
       <h1><strong>Get Eyewear for Cheap!</strong></h1> 
-      <h4 style="color:gray;text-align:center">Compare Prices. Save Money. Look Amazing.</h4>     
+      <h5 style="color:gray;text-align:center">Compare Prices. Save Money. Look Amazing.</h5>     
       <br>
       <p>
   <form name ="form1" method ="get" action ="search.php">
@@ -61,7 +61,7 @@
     </p>
 
 
-    <br><hr style="width:70%;text-align:center;height:1px;border:none;color:silver;background-color:silver;">
+    <br>
 
     <div style="margin-left:15%;">
       <strong style="font-size:20px;">Compare Prices Between:</strong>
@@ -106,7 +106,7 @@
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1573617868564-673610c60d5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=528&q=80" alt="...">
   <div class="media-body">
     <br><br>
-    <h1>Eyewear is Too Expensive</h1>
+    <h1>Eyewear is too expensive</h1>
     <br>
     <p>....but they don't have to be. 7 out of 10 adults in the United States need eye correction. Unfortunately, Americans are overpaying for glasses because eyewear is a health necessity and many businesses are taking advantage of that. </p>
     <p class="mb-0">EyeRadar is here to level the playing field by providing product prices across multiple stores. Our search engine makes sure that you'll never get taken advantage of again.</p>
