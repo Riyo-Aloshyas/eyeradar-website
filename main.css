@@ -70,7 +70,7 @@ h1{
 	margin-left:1%;
 	margin-right:1%;
 	width:98%;
-	background-color:maroon;
+	background-color:#ce954b;
 	color:white;
 }
 
@@ -159,6 +159,7 @@ img{
 	background-color:maroon; 
 	color:white;
 	padding: 10px 10px;
+	width:101.10%;
 }
 
 .row-footer-faq{
@@ -166,6 +167,7 @@ img{
 	color:white;
 	padding: 10px 10px;
 	margin-left,margin-right:1%;
+	width:101.10%;
 }
 
 .links{
