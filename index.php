@@ -3,6 +3,7 @@
 
 <head>
   <title>EyeRadar</title>
+  <link rel="shorcut icon" type="image/x-icon" href="logo.png">
   <!--first 4 are BOOTSTRAP-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -13,34 +14,34 @@
   <link href="main.css?v=<?php echo time(); ?>" rel="stylesheet" /> <!--LOOKS DIFFERENT ON PHP!-->
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:maroon;">
-      <a class="navbar-brand" href="#">EyeRadar</a>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:maroon; height:72px;">
+      <a class="navbar-brand" href="#"><img class="logo" src="logo.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
   <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
        <li class="nav-item active">
-           <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+           <a class="nav-link"  style="font-size:17px;"href="#">Home<span class="sr-only">(current)</span></a>
          </li>
          <li class="nav-item">
-          <a class="nav-link" href="FAQ.php">FAQ</a>
+          <a class="nav-link" style="font-size:17px;" href="FAQ.php">FAQ</a>
          </li>
         <li class="nav-item">
-          <a class="nav-link" href="ContactUs.html">Contact Us</a>
+          <a class="nav-link" style="font-size:17px;"href="ContactUs.html">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About Us</a>
+          <a class="nav-link"  style="font-size:17px;"href="about.html">About Us</a>
         </li>
       </ul>
       <span style="font-size: 1.5em; color: white;">
-          <a class="a-nav"href="#"><i class=" fa fa-instagram" aria-hidden="true"></i></a>
+          <a class="a-nav"href="https://www.instagram.com/eyeradar/"><i class=" fa fa-instagram" aria-hidden="true"></i></a>
         </span>
         <span style="font-size: 1.5em; color: white;">
           <a class="a-nav" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
       </span>
       <span style="font-size: 1.5em; color: white;">
-        <a class="a-nav" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </span>
   </nav>
 
@@ -102,13 +103,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://images.unsplash.com/photo-1585108844827-2024917987f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="d-block w-100" alt="...">
+      <img src="https://images.unsplash.com/photo-1532072433133-6c4bc8ccbef7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="Eyewear!" style="width:100%;">
     </div>
     <div class="carousel-item">
-      <img src="https://images.unsplash.com/photo-1563170423-741125661ae8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" class="d-block w-100" alt="...">
+      <img src="https://images.unsplash.com/photo-1563170423-741125661ae8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" class="d-block w-100" alt="Eyewear!">
     </div>
     <div class="carousel-item">
-      <img src="https://images.unsplash.com/photo-1541670380987-8bbc8454d944?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="d-block w-100" alt="...">
+      <img src="https://images.unsplash.com/photo-1541670380987-8bbc8454d944?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="d-block w-100" alt="Eyewear!">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
