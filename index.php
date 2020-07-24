@@ -63,13 +63,17 @@
 <br><br><br>
 <div class="row">
   <div class="col-6">
+
 <div class="dropdown">
   <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-left:30%; max-width:80%;">
     Click to See Stores Available!
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li> <img class ="image-vendor-index" src="https://i5.walmartimages.com/dfw/63fd9f59-49cb/655d1fa6-2244-4690-be27-cc1a70a30112/v1/walmart_logo_1x1.png"><img class="image-vendor-index-following" src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c518.png"> And Many More to Come!</li>
+    <li class="dropdown-item">Walmart</li>
+    <li class="dropdown-item">Amazon</li>
+    <div class="dropdown-divider"></div>
+    <li class="dropdown-item">and Many More to Come!</li>
   </ul>
 </div>
 </div>
