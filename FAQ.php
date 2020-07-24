@@ -108,7 +108,7 @@ We love a good feedback from our costumers! All you have to do is click on Conta
       <div class="media-body">
         <br><br>
         <ul style="list-style:none;">
-            <li><h5>EyeRadar</h5></li>
+            <li><img class="logo" src="logo.png"></li>
             <br>
             <li>© EyeRadar.com 2020-</li>
             <li>All Rights Reserved. EyeRadar is not affiliated with</li>
