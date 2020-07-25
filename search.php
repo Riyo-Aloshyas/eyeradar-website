@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>EyeRadar</title>
+  <title>Search | EyeRadar</title>
   <!--first 4 are BOOTSTRAP-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -16,7 +16,7 @@
 <body>
 
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;height:72px;">
-      <a class="navbar-brand" href="#"><img class="logo" src="logo.png"></a>
+      <a class="navbar-brand" href="index.php"><img class="logo" src="logo.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -64,16 +64,14 @@
 
 
 
+
 <?php
   $button = $_GET ['submit'];
   $search = $_GET ['search']; 
 
-  echo "<h4 class='input-search-page'><strong>";
-  echo "Results for \"" .$search."\"";
-  echo "</strong></h4>";
 
   if(strlen($search)<=1)
-    echo "<h1>Oh No :( Search term too short! Try Searching again!</h1>";
+    echo "<h1>Search term too short</h1>";
   else{
 
     $search_exploded = explode (" ", $search);
@@ -91,21 +89,26 @@
       }
 
     // connect to database
-    $con=mysqli_connect("localhost","root","brazil","website");
+    $con=mysqli_connect("localhost","root","riyo","website");
 
-    $sql ="SELECT * FROM vendors WHERE BRAND = '$search' OR NAME = '$search'";
+    $sql ="SELECT * FROM vendors WHERE MATCH(NAME,BRAND,PRICE) AGAINST ('%" . $search . "%')";
 
     $run = mysqli_query($con,$sql);
     $foundnum = mysqli_num_rows($run);
 
     if ($foundnum==0)
     {
-      echo "<h1>Oh No :( No matching result for \"<b>$search</b>\"</h1>.</br></br>
-          <h4>1. Try checking your spelling when it comes to Brand names and others. They can be very complicated!</br>
-          2. Try another product or Brand, maybe we don't have the one you're looking for!</br>
-          3. Just overall try again!</h4>";
+      echo "<br><h4>We were unable to find a book with a search term of '<b>$search</b>'.</br></br></h4>
+      1.Try more general words. for example: If you want to search 'how to create a website'
+          then use general keyword like 'create' 'website'</br>
+      2. Try different words with similar meaning</br>
+      3. Please check your spelling";
     }
     else{
+      echo "<h4 class='input-search-page'><strong>";
+      echo "<br>Results for \"" .$search."\"";
+      echo "</strong></h4>";
+
       echo "<h4><p class='input-search-page'>$foundnum results found!</p></h4>";
 
       // define num of results per page
@@ -117,7 +120,7 @@
         $start=0;
 
       // get num of results stored in database
-      $sql = "SELECT * FROM vendors WHERE BRAND = '$search' OR NAME = '$search' ORDER BY -PRICE DESC LIMIT $start, $per_page";
+      $sql = "SELECT * FROM vendors WHERE MATCH(NAME,BRAND,PRICE) AGAINST ('%" . $search . "%') ORDER BY -PRICE DESC LIMIT $start, $per_page";
       $getquery = mysqli_query($con,$sql);
 
       echo "<div class='top-line'>";

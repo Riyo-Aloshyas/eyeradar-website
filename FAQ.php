@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>FAQ</title>
+    <title>FAQ | EyeRadar</title>
 
     <!--first 4 are BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -21,7 +21,7 @@
 <body>
 
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;height:72px;">
-    <a class="navbar-brand" href="#"><img class="logo" src="logo.png"></a>
+    <a class="navbar-brand" href="index.php"><img class="logo" src="logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
         </button>
@@ -136,8 +136,9 @@ We love a good feedback from our costumers! All you have to do is click on Conta
           <ul style="list-style:none;">
             <li><h5>Resources</h5></li>
             <br>
-            <li><u><a href="about.html" class="links"  target="_blank">About Us</a></u></li>
-            <li><u><a href="ContactUs.html"class="links"  target="_blank">Follow Us</a></u></li>
+            <li><u><a href="about.html" class="links" >About Us</a></u></li>
+            <li><u><a href="ContactUs.html"class="links" >Follow Us</a></u></li>
+            <li><a >FAQ</a></li>
             <li><u><a href="tou.html" class="links">Terms of Use</a></u></li>
             <li><u><a href="privacypolicy.html" class="links">Privacy Policy</a></u></li>
           </ul>

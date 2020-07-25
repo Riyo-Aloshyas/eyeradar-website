@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>EyeRadar</title>
+  <title>Compare Eyewear Prices | EyeRadar</title>
   <link rel="shorcut icon" type="image/x-icon" href="logo.png">
   <!--first 4 are BOOTSTRAP-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -15,7 +15,7 @@
 </head>
 <body>
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon; height:72px;">
-      <a class="navbar-brand" href="#"><img class="logo" src="logo.png"></a>
+      <a class="navbar-brand" href="index.php"><img class="logo" src="logo.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -142,8 +142,8 @@
    <br><br>
     <h1>Eyewear Shopping Made Easy!</h1>
     <br>
-    <p> Set out to disrupt the traditional eyewear industry, EyeRadar, LLC is an eyewear price comparison website displaying a variety of both high-quality designer  and house brands with a wide-range of styles and lens types.  </p> <br>
-    <p class="mb-0">By compiling prices on eyewear into a single convenient spot, EyeRadar, LLC provides consumers  with the cheapest prices available. </p>
+    <p> Set out to disrupt the traditional eyewear industry, EyeRadar is an eyewear price comparison website displaying a variety of both high-quality designer  and house brands with a wide-range of styles and lens types.  </p> <br>
+    <p class="mb-0">By compiling prices on eyewear into a single convenient spot, EyeRadar provides consumers  with the cheapest prices available. </p>
   </div>
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1570053381569-78f606b5caab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="align-self-right mr-3" alt="...">
 </div>
@@ -154,7 +154,7 @@
     <h1>Glasses are too cool to not wear them!</h1>
     <br>
     <p>Some of us have the luck to have 20/20 vision and others don't. But no matter if you need glasses or not, they don't have to be an item that have the sole purpose of correcting your sight, they can be used as a fashion device!</p>
-    <p class="mb-0">Stop overpaying for eyewear with EyeRadar, LLC, and finally get that pair you always knew would look great on you!</p>
+    <p class="mb-0">Stop overpaying for eyewear with EyeRadar and finally get that pair you always knew would look great on you!</p>
   </div>
 </div>
 
@@ -166,7 +166,7 @@
         <ul style="list-style:none;">
             <li><img class="logo" src="logo.png"></li>
             <br>
-            <li>© EyeRadar.com 2020-</li>
+            <li><strong>© EyeRadar.com 2020</strong></li>
             <li>All Rights Reserved. EyeRadar is not affiliated with</li>
             <li>any retailer, store, or brand.</li>
           </ul>
@@ -175,7 +175,7 @@
       <div class="col-4">
         <div class="media-body">
           <br><br>
-          <h5 style="text-align:center">Eyewear Article Section</h5>
+          <h5 style="text-align:center">Eyewear Articles & Posts</h5>
           <br>
             <ul>
               <li><u><a href="https://www.latimes.com/business/lazarus/la-fi-lazarus-why-are-eyeglasses-so-expensive-20190122-story.html" class="links"  target="_blank">Column: Why are glasses so expensive? The eyewear industry prefers to keep that blurry</a></u></li>
@@ -192,9 +192,9 @@
           <ul style="list-style:none;">
             <li><h5>Resources</h5></li>
             <br>
-            <li><u><a href="about.html" class="links"  target="_blank">About Us</a></u></li>
-            <li><u><a href="ContactUs.html"class="links"  target="_blank">Follow Us</a></u></li>
-            <li><u><a href="FAQ.php" class="links"  target="_blank">FAQ</a></u></li>
+            <li><u><a href="about.html" class="links" >About Us</a></u></li>
+            <li><u><a href="ContactUs.html"class="links" >Follow Us</a></u></li>
+            <li><u><a href="FAQ.php" class="links" >FAQ</a></u></li>
             <li><u><a href="tou.html" class="links">Terms of Use</a></u></li>
             <li><u><a href="privacypolicy.html" class="links">Privacy Policy</a></u></li>
           </ul>
