@@ -18,52 +18,43 @@
 
 </head>
 
-<body>
+<body style="background-color:#1d0033">
 
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;height:72px;">
-    <a class="navbar-brand" href="index.php"><img class="logo" src="logo.png"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-        </button>
+ <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;">
+  <a class="navbar-brand" href="index.php"><img src="logo.png"class="logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link"  style="font-size:17px;" href="index.php">Home</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link"  style="font-size:17px" href="#">FAQ<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  style="font-size:17px" href="ContactUs.html">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="font-size:17px;" href="about.html">About Us</a>
-            </li>
-          </ul>
-
-          <span style="font-size: 1.5em; color: white;">
-            <a class="a-nav"href="https://www.instagram.com/eyeradar/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          </span>
-          <span style="font-size: 1.5em; color: white;">
-            <a class="a-nav" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-          </span>
-          <span style="font-size: 1.5em; color: white;">
-            <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-          </span>
-        </nav>
-      </div>
-
-  <br>
-  <br>
-
-      <form name ="form1" method ="get" action ="search.php">
-          <div class="input-group mb-3">
-            <input type="text" name="search" class="form-control" placeholder="Search using the product name or Brand!" aria-label="Example text with button addon" aria-describedby="button-addon1">
-          <div class="input-group-prepend">
-        <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="submit"></input>
-         </div>
-      </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="FAQ.php">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About Us</a>
+    </ul>
+     <span style="font-size: 1.5em; color: white;">
+          <a class="a-nav"href="https://www.instagram.com/eyeradar/"><i class=" fa fa-instagram" aria-hidden="true"></i></a>
+        </span>
+        <span style="font-size: 1.5em; color: white;">
+          <a class="a-nav" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      </span>
+      <span style="font-size: 1.5em; color: white;">
+        <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </span>
+    <form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" aria-label="Search">
+      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
+    </form>
+  </div>
+</nav>
 
   <br>
   <br>
@@ -101,7 +92,7 @@ We love a good feedback from our costumers! All you have to do is click on Conta
         </p>
 </div>
 </div>
-
+<br><br>
 
 <div class=" row row-footer-faq">
     <div class="col-4">

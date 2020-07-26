@@ -14,30 +14,28 @@
 </head>
 
 <body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;">
+  <a class="navbar-brand" href="index.php"><img src="logo.png" class="logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;height:72px;">
-      <a class="navbar-brand" href="index.php"><img class="logo" src="logo.png"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-  <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-       <li class="nav-item">
-           <a class="nav-link" style="font-size:17px;" href="index.php">Home</a>
-         </li>
-         <li class="nav-item">
-          <a class="nav-link" style="font-size:17px;" href="FAQ.php">FAQ</a>
-         </li>
-        <li class="nav-item">
-          <a class="nav-link" style="font-size:17px;" href="#">Contact Us<span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="font-size:17px;" href="about.html">About Us</a>
-        </li>
-      </ul>
-      <span style="font-size: 1.5em; color: white;">
-          <a class="a-nav"href="https://www.instagram.com/eyeradar/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="FAQ.php">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About Us</a>
+    </ul>
+     <span style="font-size: 1.5em; color: white;">
+          <a class="a-nav"href="https://www.instagram.com/eyeradar/"><i class=" fa fa-instagram" aria-hidden="true"></i></a>
         </span>
         <span style="font-size: 1.5em; color: white;">
           <a class="a-nav" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
@@ -45,22 +43,16 @@
       <span style="font-size: 1.5em; color: white;">
         <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </span>
-  </nav>
+    <form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" aria-label="Search">
+      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
+    </form>
+  </div>
+</nav>
 
 <br>
 <br>
 
-
-
-<form name ="form1" method ="get" action ="search.php">
-    <div class="input-group mb-3">
-      <input type="text" name="search" class="form-control" placeholder="Search using the product name or Brand!" aria-label="Example text with button addon" aria-describedby="button-addon1">
-    <div class="input-group-prepend">
-  <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="submit"></input>
-   </div>
-</div>
-
-</form>
 
 
 
@@ -89,16 +81,16 @@
       }
 
     // connect to database
-    $con=mysqli_connect("localhost","root","riyo","website");
+    $con=mysqli_connect("localhost","root","brazil","website");
 
-    $sql ="SELECT * FROM vendors WHERE MATCH(NAME,BRAND,PRICE) AGAINST ('%" . $search . "%')";
+    $sql ="SELECT * FROM vendors WHERE MATCH(NAME,BRAND,IMAGE_URL,URL,VENDOR) AGAINST ('%" . $search . "%')";
 
     $run = mysqli_query($con,$sql);
     $foundnum = mysqli_num_rows($run);
 
     if ($foundnum==0)
     {
-      echo "<br><h4>We were unable to find a book with a search term of '<b>$search</b>'.</br></br></h4>
+      echo "<br><h4>We were unable to find a product with a search term of '<b>$search</b>'.</br></br></h4>
       1.Try more general words. for example: If you want to search 'how to create a website'
           then use general keyword like 'create' 'website'</br>
       2. Try different words with similar meaning</br>
@@ -106,10 +98,8 @@
     }
     else{
       echo "<h4 class='input-search-page'><strong>";
-      echo "<br>Results for \"" .$search."\"";
+      echo "<br>$foundnum Results Found for \"" .$search."\"";
       echo "</strong></h4>";
-
-      echo "<h4><p class='input-search-page'>$foundnum results found!</p></h4>";
 
       // define num of results per page
       $per_page = 10;
@@ -120,7 +110,7 @@
         $start=0;
 
       // get num of results stored in database
-      $sql = "SELECT * FROM vendors WHERE MATCH(NAME,BRAND,PRICE) AGAINST ('%" . $search . "%') ORDER BY -PRICE DESC LIMIT $start, $per_page";
+      $sql = "SELECT * FROM vendors WHERE MATCH(NAME,BRAND,IMAGE_URL,URL,VENDOR) AGAINST ('%" . $search . "%') ORDER BY -PRICE DESC LIMIT $start, $per_page";
       $getquery = mysqli_query($con,$sql);
 
       echo "<div class='top-line'>";
@@ -155,7 +145,7 @@
           echo "<p style = 'font-size:20px'><em><strong>$".  $runrows["PRICE"] . "</strong></em></p>";
         }
 
-        echo " <p><strong>" . " click <a href='$buyLink'>here</a> to buy at</strong>
+        echo " <p><strong>" . " Click <a href='$buyLink'>here</a> to buy at</strong>
                 <a href = '$buyLink'><img src = '$imageVendor' class = 'image-vendor'></a></p>";
               echo "</div>";
           echo "</div>";
@@ -188,7 +178,7 @@
                     href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
                   }
                   else {
-                    echo " <a class='btn btn-primary'
+                    echo " <a class='btn btn-outline-primary'
                     href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
                   }
 
@@ -208,7 +198,7 @@
                         href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
                       }
                       else {
-                        echo " <a class='btn btn-primary'
+                        echo " <a class='btn btn-outline-primary'
                         href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
                       }
 
@@ -219,9 +209,9 @@
                 //in middle; hide some front and some back
                 elseif($max_pages - ($adjacents * 2) > ($start / $per_page) && ($start / $per_page) > ($adjacents * 2))
                   {
-                    echo " <a class='btn btn-primary'
+                    echo " <a class='btn btn-outline-primary'
                     href='search.php?search=$search&submit=Search&start=0'>1</a> ";
-                    echo " <a class='btn btn-primary'
+                    echo " <a class='btn btn-outline-primary'
                     href='search.php?search=$search&submit=Search&start=$per_page'>2</a> .... ";
 
                     $i = $start;
@@ -233,7 +223,7 @@
                           href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
                         }
                         else {
-                          echo " <a class='btn btn-primary'
+                          echo " <a class='btn btn-outline-primary'
                           href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
                         }
 
@@ -243,8 +233,8 @@
 
                   //close to end; only hide early pages
                   else{
-                    echo " <a class='btn btn-primary' href='search.php?search=$search&submit=Search&start=0'>1</a> ";
-                    echo " <a class='btn btn-primary' href='search.php?search=$search&submit=Search&start=$per_page'>2</a> .... ";
+                    echo " <a class='btn btn-outline-primary' href='search.php?search=$search&submit=Search&start=0'>1</a> ";
+                    echo " <a class='btn btn-outline-primary' href='search.php?search=$search&submit=Search&start=$per_page'>2</a> .... ";
 
                     $i = $start;
 
@@ -254,7 +244,7 @@
                           echo " <a class='btn btn-primary' href='search.php?search=$search&submit=Search&start=$i'><b>$counter</b></a> ";
                         }
                         else{
-                          echo " <a class='btn btn-primary' href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
+                          echo " <a class='btn btn-outline-primary' href='search.php?search=$search&submit=Search&start=$i'>$counter</a> ";
                         }
 
                         $i = $i + $per_page;

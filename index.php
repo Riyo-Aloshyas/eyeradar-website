@@ -14,27 +14,29 @@
   <link href="main.css?v=<?php echo time(); ?>" rel="stylesheet" /> <!--LOOKS DIFFERENT ON PHP!-->
 </head>
 <body>
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon; height:72px;">
-      <a class="navbar-brand" href="index.php"><img class="logo" src="logo.png"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-       <li class="nav-item active">
-           <a class="nav-link"  style="font-size:17px;"href="#">Home<span class="sr-only">(current)</span></a>
-         </li>
-         <li class="nav-item">
-          <a class="nav-link" style="font-size:17px;" href="FAQ.php">FAQ</a>
-         </li>
-        <li class="nav-item">
-          <a class="nav-link" style="font-size:17px;"href="ContactUs.html">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  style="font-size:17px;"href="about.html">About Us</a>
-        </li>
-      </ul>
-      <span style="font-size: 1.5em; color: white;">
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;">
+  <a class="navbar-brand" href="index.php"><img src="logo.png" class="logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="FAQ.php">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About Us</a>
+    </ul>
+     <span style="font-size: 1.5em; color: white;">
           <a class="a-nav"href="https://www.instagram.com/eyeradar/"><i class=" fa fa-instagram" aria-hidden="true"></i></a>
         </span>
         <span style="font-size: 1.5em; color: white;">
@@ -43,7 +45,12 @@
       <span style="font-size: 1.5em; color: white;">
         <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </span>
-  </nav>
+    <form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" aria-label="Search">
+      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
+    </form>
+  </div>
+</nav>
 
 <div class="row">
     <div class="col-8">
@@ -51,14 +58,19 @@
       <h5 style="color:gray;text-align:center">Compare Prices. Save Money. Look Amazing.</h5>     
       <br>
       <p>
-  <form name ="form1" method ="get" action ="search.php">
-    <div class="input-group mb-3">
-      <input type="text" name="search" class="form-control" placeholder="Search using the product name or Brand!" aria-label="Example text with button addon" aria-describedby="button-addon1">
-    <div class="input-group-prepend">
-  <input type="submit" value="Search" class="btn btn-outline-secondary" type="button" name="submit"></input>
-   </div>
+
+ <form name="form1" method="get" action="search.php">
+
+<div class="input-group mb-3">
+  <input class="form-control mr-sm-2" type="text" placeholder="Search using the product name or Brand!" name="search" aria-label="Search">
+<div class="input-group-append">
+    <input class="btn btn-outline-dark my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
 </div>
-  </Form>
+</div>
+
+</form>
+
+
     </p>
 <br><br><br>
 <div class="row">
@@ -133,8 +145,8 @@
     <br><br>
     <h1>Eyewear is too expensive</h1>
     <br>
-    <p>....but they don't have to be. 7 out of 10 adults in the United States need eye correction. Unfortunately, Americans are overpaying for glasses because eyewear is a health necessity and many businesses are taking advantage of that. </p>
-    <p class="mb-0">EyeRadar is here to level the playing field by providing product prices across multiple stores. Our search engine makes sure that you'll never get taken advantage of again.</p>
+    <p style="margin-left:7%;margin-right:7%;">....but they don't have to be. 7 out of 10 adults in the United States need eye correction. Unfortunately, Americans are overpaying for glasses because eyewear is a health necessity and many businesses are taking advantage of that. </p>
+    <p class="mb-0" style="margin-left:7%;margin-right:7%;">EyeRadar is here to level the playing field by providing product prices across multiple stores. Our search engine makes sure that you'll never get taken advantage of again.</p>
   </div>
 </div>
 <div class="media jumbotron-primary">
@@ -142,8 +154,8 @@
    <br><br>
     <h1>Eyewear Shopping Made Easy!</h1>
     <br>
-    <p> Set out to disrupt the traditional eyewear industry, EyeRadar is an eyewear price comparison website displaying a variety of both high-quality designer  and house brands with a wide-range of styles and lens types.  </p> <br>
-    <p class="mb-0">By compiling prices on eyewear into a single convenient spot, EyeRadar provides consumers  with the cheapest prices available. </p>
+    <p style="margin-left:7%;margin-right:7%;margin-bottom:10px;"> Set out to disrupt the traditional eyewear industry, EyeRadar is an eyewear price comparison website displaying a variety of both high-quality designer  and house brands with a wide-range of styles and lens types.  </p>
+    <p class="mb-0" style="margin-left:7%;margin-right:7%;margin-bottom:10px;">By compiling prices on eyewear into a single convenient spot, EyeRadar provides consumers  with the cheapest prices available. </p>
   </div>
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1570053381569-78f606b5caab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="align-self-right mr-3" alt="...">
 </div>
@@ -153,8 +165,8 @@
     <br><br>
     <h1>Glasses are too cool to not wear them!</h1>
     <br>
-    <p>Some of us have the luck to have 20/20 vision and others don't. But no matter if you need glasses or not, they don't have to be an item that have the sole purpose of correcting your sight, they can be used as a fashion device!</p>
-    <p class="mb-0">Stop overpaying for eyewear with EyeRadar and finally get that pair you always knew would look great on you!</p>
+    <p style="margin-left:7%;margin-right:7%;margin-bottom:10px;">Some of us have the luck to have 20/20 vision and others don't. But no matter if you need glasses or not, they don't have to be an item that have the sole purpose of correcting your sight, they can be used as a fashion device!</p>
+    <p class="mb-0" style="margin-left:7%;margin-right:7%;margin-bottom:10px;">Stop overpaying for eyewear with EyeRadar and finally get that pair you always knew would look great on you!</p>
   </div>
 </div>
 

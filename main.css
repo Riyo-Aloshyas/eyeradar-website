@@ -58,7 +58,7 @@ h1{
 }
 
 .jumbotron-secondary{
-	background:#ce954b;
+	background:#1d0033;
 	color:white;
 	text-align:center;
 	margin-bottom:0;
@@ -67,11 +67,11 @@ h1{
 .jumbotron-faq{
 
 	border-radius: 10px;
-	margin-left:1%;
-	margin-right:1%;
-	width:98%;
-	background-color:#ce954b;
-	color:white;
+	margin-left:5%;
+	margin-right:5%;
+	width:90%;
+	background-color:white;
+	color:black;
 }
 
 .jumbotron-index{
@@ -80,6 +80,7 @@ h1{
 	border-radius:20px;
 	width:90%;
 	height:60%;
+
 }
 
 

@@ -18,71 +18,82 @@
 
 </head>
 
-<body>
+<body style="background-color:#1d0033">
 
-	<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;height:72px;">
-		<a class="navbar-brand" href="index.php"><img class="logo" src="logo.png"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-      	</button>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;">
+  <a class="navbar-brand" href="index.php"><img src="logo.png" class="logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-      	<div class="collapse navbar-collapse" id="navbarNav">
-      		<ul class="navbar-nav">
-      			<li class="nav-item">
-      				<a class="nav-link" style="font-size:17px;" href="index.php">Home</a>
-      			</li>
-      			<li class="nav-item">
-      				<a class="nav-link" style="font-size:17px;" href="FAQ.php">FAQ</a>
-      			</li>
-      			<li class="nav-item">
-      				<a class="nav-link" style="font-size:17px;" href="ContactUs.html">Contact Us</a>
-      			</li>
-      			<li class="nav-item active">
-      				<a class="nav-link" style="font-size:17px;" href="#">About Us<span class="sr-only">(current)</span></a>
-      			</li>
-      		</ul>
-
-      		<span style="font-size: 1.5em; color: white;">
-      			<a class="a-nav"href="https://www.instagram.com/eyeradar/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      		</span>
-      		<span style="font-size: 1.5em; color: white;">
-      			<a class="a-nav" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-      		</span>
-      		<span style="font-size: 1.5em; color: white;">
-      			<a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-      		</span>
-      	</nav>
-
-        <br>
-        <h1 style="text-align: center"><strong>About Us</strong></h1>
-        <br>
-
-
-        <div class="jumbotron jumbotron-fluid jumbotron-about">
-  <div class="container">
-
-    <p class="lead">
-    7 out of 10 adults in the United States need eye correction. When I founded EyeRadar, LLC, it was very clear that people are overpaying for glasses as they are perceived as a health necessity and businesses are taking advantage of that. For this reason, EyeRadar, LLC is developing a system in which products from chosen eyewear vendors will be aggregated into a single database and consumers can search and select eyewear based on product prices from the various eyewear vendors. As a result, eyewear vendors increase their online presence and purchases via affiliate marketing. In addition, EyeRadar, LLC will develop a system in which consumers give reviews about the product and online shopping services, which in turn helps e-commerce enterprises and manufacturers to get customer opinion to improve their services and merchandise.</p>
-    <p class="lead">
-      By compiling prices on eyewear into a single convenient spot, EyeRadar, LLC provides consumers with the cheapest prices available. Set out to disrupt the traditional eyewear industry, EyeRadar, LLC is an eyewear price comparison website displaying a variety of both high-quality designer and house brands with a wide-range of styles and lens types including: single vision lenses, multifocal lenses, Rx sunglasses, sports glasses, kids glasses, contact lenses, digital protection, anti-reflective coatings and more.
-      
-    </p>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="FAQ.php">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="about.html">About Us</a>
+    </ul>
+     <span style="font-size: 1.5em; color: white;">
+          <a class="a-nav"href="https://www.instagram.com/eyeradar/"><i class=" fa fa-instagram" aria-hidden="true"></i></a>
+        </span>
+        <span style="font-size: 1.5em; color: white;">
+          <a class="a-nav" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      </span>
+      <span style="font-size: 1.5em; color: white;">
+        <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </span>
+    <form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" aria-label="Search">
+      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
+    </form>
   </div>
-</div>
+</nav>
 
-<h1 style="text-align:center"><strong>Creators</strong></h1>
+        <br>
+        <h1 style="text-align:center;color:white;">About Us</h1>
+        <br>
+
+
+        <div class="jumbotron jumbotron-fluid jumbotron-faq">
+      <div class="container" style="font-size:18px;">
+
+        <p class="lead">
+          <h3>Our Story...</h3>
+        </p>
+
+        <br><br>
+
+        <p>
+7 out of 10 adults in the United States need eye correction. When I founded EyeRadar, LLC, it was very clear that people are overpaying for glasses as they are perceived as a health necessity and businesses are taking advantage of that. For this reason, EyeRadar, LLC is developing a system in which products from chosen eyewear vendors will be aggregated into a single database and consumers can search and select eyewear based on product prices from the various eyewear vendors. As a result, eyewear vendors increase their online presence and purchases via affiliate marketing. In addition, EyeRadar, LLC will develop a system in which consumers give reviews about the product and online shopping services, which in turn helps e-commerce enterprises and manufacturers to get customer opinion to improve their services and merchandise.
+        </p>
+
+
+        <p>
+          By compiling prices on eyewear into a single convenient spot, EyeRadar, LLC provides consumers with the cheapest prices available. Set out to disrupt the traditional eyewear industry, EyeRadar, LLC is an eyewear price comparison website displaying a variety of both high-quality designer and house brands with a wide-range of styles and lens types including: single vision lenses, multifocal lenses, Rx sunglasses, sports glasses, kids glasses, contact lenses, digital protection, anti-reflective coatings and more.
+        </p>
+        
+</div>
+</div>
+<h1 style="text-align:center;color:white;">Creators</h1>
 <br>
 
 
 <div class="row">
 
 <div class="col-6">
-<div class="jumbotron jumbotron-fluid jumbotron-secondary" style="border-radius: 10px; margin-bottom:5%;">
+<div class="jumbotron jumbotron-fluid jumbotron-faq" style="border-radius: 10px; margin-bottom:5%;">
   <div class="container">
         <p class="lead">   <h1>Riyo Aloshyas</h1> <br>
     Currently a senior pursing a Bachelor of Science in Computer Science at UTD. Interested in full-stack development as well as data engineering. Currently a senior pursing a Bachelor of Science in Computer Science at UTD. Interested in full-stack development as well as data engineering.Currently a senior pursing a Bachelor of Science in Computer</p>
     <p>
-      Link to Personal LinkedIn: <strong><a href="https://www.linkedin.com/in/riyoalo/" style="color:white"><u>RiyoAlo </u></a></strong>
+      Link to Personal LinkedIn: <strong><a href="https://www.linkedin.com/in/riyoalo/" style="color:blue"><u>RiyoAlo </u></a></strong>
 
 
   </div>
@@ -91,7 +102,7 @@
 </div>
 
 <div class="col-6">
-<div class="jumbotron jumbotron-fluid jumbotron-secondary" style="border-radius: 10px; margin-bottom:5%;">
+<div class="jumbotron jumbotron-fluid jumbotron-faq" style="border-radius: 10px; margin-bottom:5%;">
   <div class="container">
         <p class="lead">    <h1>Leonardo Acioli</h1> <br>
     I am from Recife, Brazil, and currently a Junior at the University of Texas at Dallas.
@@ -101,7 +112,7 @@
 Always looking for opportunities in the software development industry.</p>
 
         <p>
-        Link to Personal LinkedIn: <strong><a href="https://www.linkedin.com/in/leoacioli/" style="color:white"><u> LeoAcioli</u></a></strong>
+        Link to Personal LinkedIn: <strong><a href="https://www.linkedin.com/in/leoacioli/" style="color:blue"><u> LeoAcioli</u></a></strong>
 
 
   </div>

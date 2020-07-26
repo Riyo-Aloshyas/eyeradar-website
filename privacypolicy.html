@@ -13,27 +13,27 @@
   <link href="main.css?v=<?php echo time(); ?>" rel="stylesheet" /> <!--LOOKS DIFFERENT ON PHP!-->
 </head>
 <body>
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;height:72px;">
-      <a class="navbar-brand" href="index.php"><img src="logo.png" class="logo"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-       <li class="nav-item active">
-           <a class="nav-link" style="font-size:17px;" href="index.php">Home</a>
-         </li>
-         <li class="nav-item">
-          <a class="nav-link" style="font-size:17px;" href="FAQ.php">FAQ</a>
-         </li>
-        <li class="nav-item">
-          <a class="nav-link" style="font-size:17px;" href="ContactUs.html">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="font-size:17px;" href="about.html">About Us</a>
-        </li>
-      </ul>
-      <span style="font-size: 1.5em; color: white;">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;">
+  <a class="navbar-brand" href="index.php"><img src="logo.png" class="logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="FAQ.php">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About Us</a>
+    </ul>
+     <span style="font-size: 1.5em; color: white;">
           <a class="a-nav"href="https://www.instagram.com/eyeradar/"><i class=" fa fa-instagram" aria-hidden="true"></i></a>
         </span>
         <span style="font-size: 1.5em; color: white;">
@@ -42,7 +42,12 @@
       <span style="font-size: 1.5em; color: white;">
         <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </span>
-  </nav>
+    <form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" aria-label="Search">
+      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
+    </form>
+  </div>
+</nav>
 
   <br>
 <div style="margin-left:10px; font-size:12px;">
