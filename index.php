@@ -46,9 +46,16 @@
         <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </span>
     <form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" aria-label="Search">
-      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
+      <input class="form-control mr-sm-2" id='searchbar'type="text" name="search" aria-label="Search" maxlength="50" required/>
+      <input class="btn btn-outline-light my-2 my-sm-0" id='submit' type="submit" value="Search" name="submit" />
     </form>
+    <script>
+      document.getElementById('searchbar').onkeypress = function() {
+        document.getElementById('submit').disabled = !this.value.trim();
+    }
+    </script>
+
+    
   </div>
 </nav>
 
@@ -59,16 +66,17 @@
       <br>
       <p>
 
- <form name="form1" method="get" action="search.php">
+<form name="form1" method="get" action="search.php">
 
 <div class="input-group mb-3">
-  <input class="form-control mr-sm-2" type="text" placeholder="Search using the product name or Brand!" name="search" aria-label="Search">
+  <input class="form-control mr-sm-2" type="text" placeholder="Search using the product name or Brand!" name="search" aria-label="Search" required>
 <div class="input-group-append">
     <input class="btn btn-outline-dark my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
 </div>
 </div>
 
 </form>
+
 
 
     </p>

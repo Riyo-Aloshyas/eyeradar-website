@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<html>
 <head>
+  <meta charset="UTF-8">
   <title>Terms of Use | EyeRadar</title>
+
   <!--first 4 are BOOTSTRAP-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -11,7 +14,9 @@
   <script src="https://kit.fontawesome.com/31e213ab78.js" crossorigin="anonymous"></script> <!--for icons-->
   <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'> <!--for google fonts-->
   <link href="main.css?v=<?php echo time(); ?>" rel="stylesheet" /> <!--LOOKS DIFFERENT ON PHP!-->
+
 </head>
+
 <body>
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:maroon;">
   <a class="navbar-brand" href="index.php"><img src="logo.png" class="logo"></a>
@@ -43,9 +48,14 @@
         <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </span>
     <form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" aria-label="Search">
-      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
+      <input class="form-control mr-sm-2" id='searchbar'type="text" name="search" aria-label="Search" maxlength="50" required/>
+      <input class="btn btn-outline-light my-2 my-sm-0" id='submit' type="submit" value="Search" name="submit" />
     </form>
+    <script>
+      document.getElementById('searchbar').onkeypress = function() {
+        document.getElementById('submit').disabled = !this.value.trim();
+    }
+    </script>
   </div>
 </nav>
 
@@ -126,14 +136,14 @@
 </div>
 </nav>
 
-<div class="row row-footer">
+<div class=" row row-footer-faq">
     <div class="col-4">
       <div class="media-body">
         <br><br>
         <ul style="list-style:none;">
             <li><img class="logo" src="logo.png"></li>
             <br>
-            <li>© EyeRadar.com 2020-</li>
+            <li><strong>© EyeRadar.com 2020</strong></li>
             <li>All Rights Reserved. EyeRadar is not affiliated with</li>
             <li>any retailer, store, or brand.</li>
           </ul>
@@ -142,7 +152,7 @@
       <div class="col-4">
         <div class="media-body">
           <br><br>
-          <h5 style="text-align:center">Eyewear Article Section</h5>
+          <h5 style="text-align:center">Eyewear Articles & Posts</h5>
           <br>
             <ul>
               <li><u><a href="https://www.latimes.com/business/lazarus/la-fi-lazarus-why-are-eyeglasses-so-expensive-20190122-story.html" class="links"  target="_blank">Column: Why are glasses so expensive? The eyewear industry prefers to keep that blurry</a></u></li>
@@ -161,7 +171,7 @@
             <br>
             <li><u><a href="about.html" class="links" >About Us</a></u></li>
             <li><u><a href="ContactUs.html"class="links" >Follow Us</a></u></li>
-            <li><u><a href="FAQ.php" class="links" >FAQ</a></u></li>
+            <li><u><a href="FAQ.php" class="links">FAQ</a></u></li>
             <li><a >Terms of Use</a></li>
             <li><u><a href="privacypolicy.html" class="links">Privacy Policy</a></u></li>
           </ul>
@@ -169,7 +179,5 @@
       </div>
 </div>
 
-
 </body>
-
-
+</html>

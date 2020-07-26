@@ -49,10 +49,17 @@
       <span style="font-size: 1.5em; color: white;">
         <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </span>
+    
     <form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" aria-label="Search">
-      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
+      <input class="form-control mr-sm-2" id='searchbar'type="text" name="search" aria-label="Search" maxlength="50" required/>
+      <input class="btn btn-outline-light my-2 my-sm-0" id='submit' type="submit" value="Search" name="submit" />
     </form>
+    <script>
+      document.getElementById('searchbar').onkeypress = function() {
+        document.getElementById('submit').disabled = !this.value.trim();
+    }
+    </script>
+
   </div>
 </nav>
 
@@ -65,7 +72,7 @@
       <div class="container" style="font-size:18px;">
 
         <p class="lead">
-          <h3>Our Story...</h3>
+          <h3>Our Story....</h3>
         </p>
 
         <br><br>
@@ -128,7 +135,7 @@ Always looking for opportunities in the software development industry.</p>
         <ul style="list-style:none;">
             <li><img class="logo" src="logo.png"></li>
             <br>
-            <li>© EyeRadar.com 2020-</li>
+            <li><strong>© EyeRadar.com 2020</strong></li>
             <li>All Rights Reserved. EyeRadar is not affiliated with</li>
             <li>any retailer, store, or brand.</li>
           </ul>
@@ -137,7 +144,7 @@ Always looking for opportunities in the software development industry.</p>
       <div class="col-4">
         <div class="media-body">
           <br><br>
-          <h5 style="text-align:center">Eyewear Article Section</h5>
+          <h5 style="text-align:center">Eyewear Articles & Posts</h5>
           <br>
             <ul>
               <li><u><a href="https://www.latimes.com/business/lazarus/la-fi-lazarus-why-are-eyeglasses-so-expensive-20190122-story.html" class="links"  target="_blank">Column: Why are glasses so expensive? The eyewear industry prefers to keep that blurry</a></u></li>
