@@ -98,11 +98,11 @@
     }
     else{
       echo "<h4 class='input-search-page'><strong>";
-      echo "<br>$foundnum Results Found for \"" .$search."\"";
+      echo "<br>$foundnum Results Found for \"" .$search."\" ";
       echo "</strong></h4>";
 
       // define num of results per page
-      $per_page = 10;
+      $per_page = 12;
       $start = isset($_GET['start']) ? $_GET['start']: '';
       $max_pages = ceil($foundnum / $per_page);
 
@@ -113,14 +113,10 @@
       $sql = "SELECT * FROM vendors WHERE MATCH(NAME,BRAND,IMAGE_URL,URL,VENDOR) AGAINST ('%" . $search . "%') ORDER BY -PRICE DESC LIMIT $start, $per_page";
       $getquery = mysqli_query($con,$sql);
 
-      echo "<div class='top-line'>";
-      echo "</div>";
-
+      echo "<div class='row'>";
+      echo "<div class='col-9 d-flex flex-wrap'>";
       while($runrows = mysqli_fetch_array($getquery))
       {
-        echo "<div class='searchboxes col-8'>";
-        echo "<div class='media'>";
-
         $buyLink = $runrows["URL"];
         $imageLink = $runrows["IMAGE_URL"];
 
@@ -133,24 +129,27 @@
           $imageVendor = 'https://mobilemarketingwatch.com/wp-content/uploads/2017/04/amazon.jpg';
         }
 
-        echo "<img class='align-self-center mr-3 img-searchboxes' src='$imageLink'>";
-        echo "<div class='media-body'>";
-        echo "<br><br>";
-
-        echo "<h5 class='mt-0'>" . $runrows["NAME"] . "</h5>";
+        echo "<div class='card' style='width:29%;display:inline-block;margin-left:2%;margin-top:2%;margin-bottom:2%'>
+        <img src='$imageLink' class='img-searchboxes' alt='...'><hr>";
+        echo"<div class='card-body'>";
+        echo"<h5 class='card-title'>". $runrows["NAME"] ."</h5>";
         if ($runrows["PRICE"] == NULL){
-          echo "<p style = 'font-size:20px'><em><strong> Price Not Available. Click link!" . "</strong></em></p>";
+          echo "<p class='card-text' style = 'font-size:20px'><em><strong> Price Not Available. Click link!" . "</strong></em></p>";
         }
         else{
-          echo "<p style = 'font-size:20px'><em><strong>$".  $runrows["PRICE"] . "</strong></em></p>";
+          echo "<p class='card-text' style = 'font-size:25px'><strong>$".  $runrows["PRICE"] . "</strong></p>";
         }
 
-        echo " <p><strong>" . " Click <a href='$buyLink'>here</a> to buy at</strong>
-                <a href = '$buyLink'><img src = '$imageVendor' class = 'image-vendor'></a></p>";
-              echo "</div>";
+        echo "<a href='$buyLink' target='_blank' class='btn btn-success' style='border-radius:40px;'>Click to Buy</a><a href='$buyLink' target='_blank'><img src='$imageVendor' class='image-vendor'></a>";
           echo "</div>";
           echo "</div>";
         }
+
+        echo "</div>";
+        echo "<div class='col-3'>";
+        echo "hello";
+        echo "</div>";
+        echo "</div>";
 
 
               // PAGINATION for search results
