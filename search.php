@@ -44,9 +44,14 @@
         <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </span>
     <form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" aria-label="Search">
-      <input class="btn btn-outline-light my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
+      <input class="form-control mr-sm-2" id='searchbar'type="text" name="search" aria-label="Search" maxlength="50" required/>
+      <input class="btn btn-outline-light my-2 my-sm-0" id='submit' type="submit" value="Search" name="submit" />
     </form>
+    <script>
+      document.getElementById('searchbar').onkeypress = function() {
+        document.getElementById('submit').disabled = !this.value.trim();
+    }
+    </script>
   </div>
 </nav>
 
@@ -59,11 +64,17 @@
 
 <?php
   $button = $_GET ['submit'];
-  $search = $_GET ['search']; 
+  $search = $_GET ['search'];
 
+  $con=mysqli_connect("localhost","root","riyo","website");
 
   if(strlen($search)<=1)
-    echo "<h1>Search term too short</h1>";
+    echo "<h2><center>Search term too short!</br></br></center></h2>
+
+    1.Try more general words. for example: If you want to search 'how to create a website'
+          then use general keyword like 'create' 'website'</br>
+      2. Try different words with similar meaning</br>
+      3. Please check your spelling";
   else{
 
     $search_exploded = explode (" ", $search);
@@ -81,7 +92,7 @@
       }
 
     // connect to database
-    $con=mysqli_connect("localhost","root","brazil","website");
+    //$con=mysqli_connect("localhost","root","riyo","website");
 
     $sql ="SELECT * FROM vendors WHERE MATCH(NAME,BRAND,IMAGE_URL,URL,VENDOR) AGAINST ('%" . $search . "%')";
 
@@ -90,7 +101,8 @@
 
     if ($foundnum==0)
     {
-      echo "<br><h4>We were unable to find a product with a search term of '<b>$search</b>'.</br></br></h4>
+      echo "<br><h3><center>We were unable to find a product with a search term of '<b>$search</b>'.</br></br></center></h3>
+
       1.Try more general words. for example: If you want to search 'how to create a website'
           then use general keyword like 'create' 'website'</br>
       2. Try different words with similar meaning</br>
@@ -98,7 +110,7 @@
     }
     else{
       echo "<h4 class='input-search-page'><strong>";
-      echo "<br>$foundnum Results Found for \"" .$search."\" ";
+      echo "<br>$foundnum Results Found for \"" .$search."\"";
       echo "</strong></h4>";
 
       // define num of results per page
@@ -147,7 +159,7 @@
 
         echo "</div>";
         echo "<div class='col-3'>";
-        echo "hello";
+        //echo "hello";
         echo "</div>";
         echo "</div>";
 

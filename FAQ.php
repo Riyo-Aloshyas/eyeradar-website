@@ -90,10 +90,28 @@ It will cost you a whooping total of: $0.00.
         <br>
 
         <p class="lead">
-          <h5>"I'd love to give the website some Feedback! How do I do so?"</h5>
+          <h5>"Is my information safe with SlugBooks?"</h5>
         </p>
         <p>
-We love a good feedback from our costumers! All you have to do is click on Contact Us and do so via e-mail. Or, better yet, just click <a href="ContactUs.html" style="color:white;"><u>here</u></a> 
+Yes, your privacy is extremely important to us. We will never, ever sell your personal information.
+        </p>
+        <br>
+
+        <p class="lead">
+          <h5>"I already purchased my glasses from the store. Is it too late for me to use EyeRadar?"</h5>
+        </p>
+        <p>
+Nope! You have until your store's deadline to return your glasses. Save your receipts and return those overpriced glasses to the store before the deadline. It's never too late to save money. Unless you're bankrupt...then you probably can't save money.
+
+        </p>
+
+        <br>
+
+        <p class="lead">
+          <h5>"I'd love to give the website some feedback! How do I do so?"</h5>
+        </p>
+        <p>
+We love a good feedback from our costumers! All you have to do is click on Contact Us and do so via e-mail or Instagram; we'll reach back to you within 24 hours. Also, you can just click <a href="ContactUs.html" style="color:black;"><u>here</u>!</a> 
         </p>
 </div>
 </div>
