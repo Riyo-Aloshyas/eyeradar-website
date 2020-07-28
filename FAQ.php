@@ -90,7 +90,7 @@ It will cost you a whooping total of: $0.00.
         <br>
 
         <p class="lead">
-          <h5>"Is my information safe with SlugBooks?"</h5>
+          <h5>"Is my information safe with EyeRadar?"</h5>
         </p>
         <p>
 Yes, your privacy is extremely important to us. We will never, ever sell your personal information.
