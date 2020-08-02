@@ -1,0 +1,1 @@
+DELETE n1 FROM vendors n1, vendors n2 WHERE n1.DATE < n2.DATE AND n1.URL = n2.URL
