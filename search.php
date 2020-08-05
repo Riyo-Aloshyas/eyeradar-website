@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Search | EyeRadar</title>
   <!--first 4 are BOOTSTRAP-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -63,10 +64,19 @@
 
 
 <?php
+
+  $servername = "fdb30.awardspace.net";   //$servername = "fdb26.awardspace.net"; 
+  $username = "3528429_testdb2";           //$username = "3314504_shiva";
+  $password = "magnify2020";                 //$password = "Shivam@179";
+  $dbname = "3528429_testdb2";           //$dbname = "3314504_shiva";
+
+
+
+
   $button = $_GET ['submit'];
   $search = $_GET ['search'];
 
-  $con=mysqli_connect("localhost","root","riyo","website");
+  $con=mysqli_connect($servername, $username, $password, $dbname);
 
   if(strlen($search)<=1)
     echo "<h2><center>Search term too short!</br></br></center></h2>
@@ -92,7 +102,7 @@
       }
 
     // connect to database
-    //$con=mysqli_connect("localhost","root","riyo","website");
+    //$con=mysqli_connect("fdb30.awardspace.net","3528429_testdb","magnify2020","3528429_testdb");
 
     $sql ="SELECT * FROM vendors WHERE MATCH(NAME,BRAND,IMAGE_URL,URL,VENDOR) AGAINST ('%" . $search . "%')";
 
@@ -110,11 +120,23 @@
     }
     else{
       echo "<h4 class='input-search-page'><strong>";
-      echo "<br>$foundnum Results Found for \"" .$search."\"";
+      echo "<br>$foundnum Results Found for \"" .$search."\"!";
       echo "</strong></h4>";
 
+      //DIV FOR ADS!!!
+      echo "<div class='ad'>";
+      
+      
+      
+      
+      
+      
+      
+      
+      echo "</div>";
+
       // define num of results per page
-      $per_page = 12;
+      $per_page = 15;
       $start = isset($_GET['start']) ? $_GET['start']: '';
       $max_pages = ceil($foundnum / $per_page);
 
@@ -124,9 +146,9 @@
       // get num of results stored in database
       $sql = "SELECT * FROM vendors WHERE MATCH(NAME,BRAND,IMAGE_URL,URL,VENDOR) AGAINST ('%" . $search . "%') ORDER BY -PRICE DESC LIMIT $start, $per_page";
       $getquery = mysqli_query($con,$sql);
-
+      
       echo "<div class='row'>";
-      echo "<div class='col-9 d-flex flex-wrap'>";
+
       while($runrows = mysqli_fetch_array($getquery))
       {
         $buyLink = $runrows["URL"];
@@ -134,14 +156,14 @@
 
         if ($runrows["VENDOR"] == 'Walmart')
         {
-          $imageVendor = 'https://cdn.freebiesupply.com/logos/thumbs/2x/walmart-logo.png';
+          $imageVendor = 'https://www.powellandmahoney.com/wp-content/uploads/2017/03/retailers-walmart-logo-1.png';
         }
         else if ($runrows["VENDOR"] == 'Amazon')
         {
           $imageVendor = 'https://mobilemarketingwatch.com/wp-content/uploads/2017/04/amazon.jpg';
         }
 
-        echo "<div class='card' style='width:29%;display:inline-block;margin-left:2%;margin-top:2%;margin-bottom:2%'>
+        echo "<div class='card col-md-2' style='display:inline-block;margin-left:2%;margin-top:2%;margin-bottom:2%'>
         <img src='$imageLink' class='img-searchboxes' alt='...'><hr>";
         echo"<div class='card-body'>";
         echo"<h5 class='card-title'>". $runrows["NAME"] ."</h5>";
@@ -156,13 +178,8 @@
           echo "</div>";
           echo "</div>";
         }
-
+        
         echo "</div>";
-        echo "<div class='col-3'>";
-        //echo "hello";
-        echo "</div>";
-        echo "</div>";
-
 
               // PAGINATION for search results
 

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Compare Eyewear Prices | EyeRadar</title>
   <link rel="shorcut icon" type="image/x-icon" href="logo.png">
   <!--first 4 are BOOTSTRAP-->
@@ -34,16 +35,16 @@
         <a class="nav-link" href="ContactUs.html">Contact Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about.html">About Us</a>
+        <a class="nav-link" href="about.html">About Us</a></li>
     </ul>
      <span style="font-size: 1.5em; color: white;">
-          <a class="a-nav"href="https://www.instagram.com/eyeradar/"><i class=" fa fa-instagram" aria-hidden="true"></i></a>
+          <a class="a-nav"href="https://www.instagram.com/eyeradar/" target="_blank"><i class=" fa fa-instagram" aria-hidden="true"></i></a>
         </span>
         <span style="font-size: 1.5em; color: white;">
-          <a class="a-nav" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+          <a class="a-nav" href="https://www.linkedin.com/company/eyeradar/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
       </span>
       <span style="font-size: 1.5em; color: white;">
-        <a class="a-nav" href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a class="a-nav" href="ContactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </span>
     <form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php">
       <input class="form-control mr-sm-2" id='searchbar'type="text" name="search" aria-label="Search" maxlength="50" required/>
@@ -59,33 +60,27 @@
   </div>
 </nav>
 
+
 <div class="row">
-    <div class="col-8">
-      <h1><strong>Get Eyewear for Cheap!</strong></h1> 
+    <div class="col-sm-12 col-md-8 content">
+      <h1 style="margin-top:20%"><strong>Get Eyewear for Cheap!</strong></h1> 
       <h5 style="color:gray;text-align:center">Compare Prices. Save Money. Look Amazing.</h5>     
       <br>
       <p>
 
-<form name="form1" method="get" action="search.php">
 
-<div class="input-group mb-3">
-  <input class="form-control mr-sm-2" type="text" placeholder="Search using the product name or Brand!" name="search" aria-label="Search" required>
-<div class="input-group-append">
-    <input class="btn btn-outline-dark my-2 my-sm-0" type="submit" value="Search" name="submit"></input>
-</div>
-</div>
-
-</form>
-
-
+<form class="form-inline my-2 my-lg-0" name="form1" method="get" action="search.php" style="display: flex; justify-content: center; margin-left:0px;">
+      <input class="form-control mr-sm-2" placeholder="Search away!" id='searchbar'type="text" name="search" aria-label="Search" maxlength="50" required/>
+      <input class="btn btn-outline-dark my-2 my-sm-0" id='submit' type="submit" value="Search" name="submit" />
+    </form>
 
     </p>
 <br><br><br>
 <div class="row">
-  <div class="col-6">
+  <div class="col-md-6">
 
 <div class="dropdown">
-  <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-left:30%; max-width:80%;">
+  <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-left:15.0%; margin-bottom:20px; width:70%;">
     Click to See Stores Available!
     <span class="caret"></span>
   </button>
@@ -98,10 +93,10 @@
 </div>
 </div>
 
-<div class="col-6">
+<div class="col-md-6">
 <div class="dropdown">
-  <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-left:10%; max-width:80%;">
-    How Does EyeRadar Work?
+  <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-left:15.0%;margin-bottom:20%; width:70%;">
+    How Can I Use the Searchbar?
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -113,12 +108,11 @@
 </div>
 
 
-
 </div>
 </strong>
 
 
-    <div class="col-4">
+    <div class="col-sm-12 col-md-4 content">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -147,17 +141,18 @@
 </div></div>
  </div>
 
-<div class="media jumbotron-secondary">
+
+<div class="media jumbotron-secondary d-flex flex-wrap">
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1573617868564-673610c60d5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=528&q=80" alt="...">
   <div class="media-body">
     <br><br>
     <h1>Eyewear is too expensive</h1>
     <br>
     <p style="margin-left:7%;margin-right:7%;">....but they don't have to be. 7 out of 10 adults in the United States need eye correction. Unfortunately, Americans are overpaying for glasses because eyewear is a health necessity and many businesses are taking advantage of that. </p>
-    <p class="mb-0" style="margin-left:7%;margin-right:7%;">EyeRadar is here to level the playing field by providing product prices across multiple stores. Our search engine makes sure that you'll never get taken advantage of again.</p>
+    <p class="mb-0" style="margin-left:7%;margin-right:7%;margin-bottom:7%;">EyeRadar is here to level the playing field by providing product prices across multiple stores. Our search engine makes sure that you'll never get taken advantage of again.</p>
   </div>
 </div>
-<div class="media jumbotron-primary">
+<div class="media jumbotron-primary d-flex flex-wrap">
   <div class="media-body">
    <br><br>
     <h1>Eyewear Shopping Made Easy!</h1>
@@ -167,7 +162,7 @@
   </div>
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1570053381569-78f606b5caab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="align-self-right mr-3" alt="...">
 </div>
-<div class="media jumbotron-secondary">
+<div class="media jumbotron-secondary d-flex flex-wrap">
   <img class="img-jumbotron" src="https://images.unsplash.com/photo-1557215235-21d6064d6ff9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=449&q=80" class="align-self-right mr-3" alt="...">
   <div class="media-body">
     <br><br>
@@ -180,19 +175,19 @@
 
 
 <div class="row row-footer">
-    <div class="col-4">
+    <div class="col-sm-12 col-md-4 content">
       <div class="media-body">
         <br><br>
         <ul style="list-style:none;">
             <li><img class="logo" src="logo.png"></li>
             <br>
-            <li><strong>© EyeRadar.com 2020</strong></li>
+            <li><strong>© EyeRadar 2020</strong></li>
             <li>All Rights Reserved. EyeRadar is not affiliated with</li>
             <li>any retailer, store, or brand.</li>
           </ul>
     </div>
   </div>
-      <div class="col-4">
+      <div class="col-sm-12 col-md-4 content">
         <div class="media-body">
           <br><br>
           <h5 style="text-align:center">Eyewear Articles & Posts</h5>
@@ -206,14 +201,14 @@
             </ul>
         </div>
       </div>
-    <div class="col-4">
-        <div class="media-body" style="text-align:center;">
+     <div class="col-sm-12 col-md-4 content">
+        <div class="media-body">
           <br><br>
-          <ul style="list-style:none;">
-            <li><h5>Resources</h5></li>
-            <br>
+          <h5 style="margin-left:20px;">Resources</h5>
+          <br>
+          <ul>
             <li><u><a href="about.html" class="links" >About Us</a></u></li>
-            <li><u><a href="ContactUs.html"class="links" >Follow Us</a></u></li>
+            <li><u><a href="ContactUs.html" class="links" >Follow Us</a></u></li>
             <li><u><a href="FAQ.php" class="links" >FAQ</a></u></li>
             <li><u><a href="tou.html" class="links">Terms of Use</a></u></li>
             <li><u><a href="privacypolicy.html" class="links">Privacy Policy</a></u></li>
@@ -221,6 +216,7 @@
         </div>
       </div>
 </div>
+
 
 
 </body>
